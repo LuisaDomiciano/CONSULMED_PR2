@@ -37,5 +37,10 @@ namespace CONSULMED_PR2
         {
             comboBoxAgreementPac.Visible = true; // Mostrar se marcado "Sim"
         }
+
+        private void btnSaveRegistrationPac_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

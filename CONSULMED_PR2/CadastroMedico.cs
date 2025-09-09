@@ -13,6 +13,10 @@ namespace CONSULMED_PR2
 {
     public partial class CadastroMedico : Form
     {
+        private const string V = @"INSERT INTO CadastroMedico 
+                                    (NOME_MED, CPF_MED, EMAIL_MED, TELEFONE_MED, CRM, CODCONVENIO, CODSUS_MED, USUARIO_MED, SENHA_MED, CONFIRME_SENHA_MED)
+                                     VALUES (@NOME_MED, @CPF_MED, @EMAIL_MED, @TELEFONE_MED, @CRM, @CODCONVENIO, @CODSUS_MED, @USUARIO_MED, @SENHA_MED, @CONFIRME_SENHA_MED)";
+
         public CadastroMedico()
         {
             InitializeComponent();
@@ -46,52 +50,48 @@ namespace CONSULMED_PR2
 
         private void btnSaveRegistrationMed_Click(object sender, EventArgs e)
         {
-            string nome = txtNameMed.Text;
-            string cpf = txtCpfMed.Text;
-            string email = txtEmailMed.Text;
-            string telefone = txtFoneMed.Text;
-            string crm = txtCrm.Text;
-            bool atendeConvenio = checkBoxAgreementYesMed.Checked;
-            string convenios = comboBoxAgreementMed.Text;
-            string codConvenio = TxtCodAgreement.Text;
-            bool atendeSUS = checkBoxYesMed.Checked;
-            string codSUS = TxtCodSus.Text;
-            string usuario = txtUserMed.Text;
-            string senha = txtPasswordMed.Text;
-            string conexao = "Server=sqlexpress;Database=CJ3027392PR2;User Id=aluno;Password=aluno;";
-
-            using (SqlConnection con = new SqlConnection(conexao))
+            try
             {
-                string query = "INSERT INTO CadastroMedico (Nome, CPF, Email, Telefone, CRM, AtendeConvenio, Convenios, CodConvenio, AtendeSUS, CodSUS, Usuario, Senha) " +
-                               "VALUES (@Nome, @CPF, @Email, @Telefone, @CRM, @AtendeConvenio, @Convenios, @CodConvenio, @AtendeSUS, @CodSUS, @Usuario, @Senha)";
+                // String de conexão com o banco (ajuste conforme seu servidor e banco de dados)
+                string connectionString = @"Server=sqlepress;Database=CJ3027392PR2;User Id=aluno;Password=aluno";
 
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@Nome", nome);
-                    cmd.Parameters.AddWithValue("@CPF", cpf);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Telefone", telefone);
-                    cmd.Parameters.AddWithValue("@CRM", crm);
-                    cmd.Parameters.AddWithValue("@AtendeConvenio", atendeConvenio);
-                    cmd.Parameters.AddWithValue("@Convenios", convenios);
-                    cmd.Parameters.AddWithValue("@CodConvenio", codConvenio);
-                    cmd.Parameters.AddWithValue("@AtendeSUS", atendeSUS);
-                    cmd.Parameters.AddWithValue("@CodSUS", codSUS);
-                    cmd.Parameters.AddWithValue("@Usuario", usuario);
-                    cmd.Parameters.AddWithValue("@Senha", senha);
+                    conn.Open();
 
-                    try
+                    string query = V;
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        con.Open();
+                        // Pegando valores das TextBox
+                        cmd.Parameters.AddWithValue("@NOME_MED", txtNameMed.Text);
+                        cmd.Parameters.AddWithValue("@CPF_MED", txtCpfMed.Text);
+                        cmd.Parameters.AddWithValue("@EMAIL_MED", txtEmailMed.Text);
+                        cmd.Parameters.AddWithValue("@TELEFONE_MED", txtFoneMed.Text);
+                        cmd.Parameters.AddWithValue("@CRM", txtCrm.Text);
+                        cmd.Parameters.AddWithValue("@CODCONVENIO", TxtCodAgreement.Text);
+                        cmd.Parameters.AddWithValue("@CODSUS_MED", TxtCodSus.Text);
+                        cmd.Parameters.AddWithValue("@USUARIO_MED", txtUserMed.Text);
+                        cmd.Parameters.AddWithValue("@SENHA_MED", txtPasswordMed.Text);
+                        cmd.Parameters.AddWithValue("@CONFIRME_SENHA_MED", txtConfirmPasswordMed.Text);
+
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Dados salvos com sucesso!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro: " + ex.Message);
                     }
                 }
+
+                MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar os dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
 }
+
+
+
+                 
+            
+    
+

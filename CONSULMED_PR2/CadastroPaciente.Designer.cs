@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroPaciente));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCadastroPac = new System.Windows.Forms.PictureBox();
             this.lblRegistrationMed = new System.Windows.Forms.Label();
             this.lblNamePac = new System.Windows.Forms.Label();
             this.lblCpfPac = new System.Windows.Forms.Label();
@@ -41,8 +41,6 @@
             this.lblConfirmPasswordPac = new System.Windows.Forms.Label();
             this.lblUserPac = new System.Windows.Forms.Label();
             this.comboBoxAgreementPac = new System.Windows.Forms.ComboBox();
-            this.checkBoxNoPac = new System.Windows.Forms.CheckBox();
-            this.checkBoxYesPac = new System.Windows.Forms.CheckBox();
             this.checkBoxAgreementNoPac = new System.Windows.Forms.CheckBox();
             this.checkBoxAgreementYesPac = new System.Windows.Forms.CheckBox();
             this.txtNamePac = new System.Windows.Forms.TextBox();
@@ -53,19 +51,20 @@
             this.txtUserPac = new System.Windows.Forms.TextBox();
             this.txtFonePac = new System.Windows.Forms.TextBox();
             this.btnSaveRegistrationPac = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.TxtCodSusPac = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroPac)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxCadastroPac
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(744, 470);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxCadastroPac.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxCadastroPac.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCadastroPac.Image")));
+            this.pictureBoxCadastroPac.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxCadastroPac.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxCadastroPac.Name = "pictureBoxCadastroPac";
+            this.pictureBoxCadastroPac.Size = new System.Drawing.Size(744, 470);
+            this.pictureBoxCadastroPac.TabIndex = 1;
+            this.pictureBoxCadastroPac.TabStop = false;
             // 
             // lblRegistrationMed
             // 
@@ -200,37 +199,11 @@
             "Bradesco",
             "SulAmérica"});
             this.comboBoxAgreementPac.Location = new System.Drawing.Point(300, 425);
-            this.comboBoxAgreementPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAgreementPac.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAgreementPac.Name = "comboBoxAgreementPac";
             this.comboBoxAgreementPac.Size = new System.Drawing.Size(92, 24);
             this.comboBoxAgreementPac.TabIndex = 14;
             this.comboBoxAgreementPac.Text = "Qual?";
-            // 
-            // checkBoxNoPac
-            // 
-            this.checkBoxNoPac.AutoSize = true;
-            this.checkBoxNoPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
-            this.checkBoxNoPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxNoPac.Location = new System.Drawing.Point(167, 333);
-            this.checkBoxNoPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBoxNoPac.Name = "checkBoxNoPac";
-            this.checkBoxNoPac.Size = new System.Drawing.Size(53, 21);
-            this.checkBoxNoPac.TabIndex = 19;
-            this.checkBoxNoPac.Text = "Não";
-            this.checkBoxNoPac.UseVisualStyleBackColor = false;
-            // 
-            // checkBoxYesPac
-            // 
-            this.checkBoxYesPac.AutoSize = true;
-            this.checkBoxYesPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
-            this.checkBoxYesPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBoxYesPac.Location = new System.Drawing.Point(259, 334);
-            this.checkBoxYesPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBoxYesPac.Name = "checkBoxYesPac";
-            this.checkBoxYesPac.Size = new System.Drawing.Size(50, 21);
-            this.checkBoxYesPac.TabIndex = 20;
-            this.checkBoxYesPac.Text = "Sim";
-            this.checkBoxYesPac.UseVisualStyleBackColor = false;
             // 
             // checkBoxAgreementNoPac
             // 
@@ -238,7 +211,7 @@
             this.checkBoxAgreementNoPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.checkBoxAgreementNoPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkBoxAgreementNoPac.Location = new System.Drawing.Point(228, 387);
-            this.checkBoxAgreementNoPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxAgreementNoPac.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxAgreementNoPac.Name = "checkBoxAgreementNoPac";
             this.checkBoxAgreementNoPac.Size = new System.Drawing.Size(53, 21);
             this.checkBoxAgreementNoPac.TabIndex = 21;
@@ -252,7 +225,7 @@
             this.checkBoxAgreementYesPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.checkBoxAgreementYesPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkBoxAgreementYesPac.Location = new System.Drawing.Point(228, 427);
-            this.checkBoxAgreementYesPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxAgreementYesPac.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxAgreementYesPac.Name = "checkBoxAgreementYesPac";
             this.checkBoxAgreementYesPac.Size = new System.Drawing.Size(50, 21);
             this.checkBoxAgreementYesPac.TabIndex = 22;
@@ -265,7 +238,7 @@
             this.txtNamePac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtNamePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtNamePac.Location = new System.Drawing.Point(124, 132);
-            this.txtNamePac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamePac.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamePac.Name = "txtNamePac";
             this.txtNamePac.Size = new System.Drawing.Size(146, 23);
             this.txtNamePac.TabIndex = 23;
@@ -275,7 +248,7 @@
             this.txtEmailPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtEmailPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtEmailPac.Location = new System.Drawing.Point(124, 233);
-            this.txtEmailPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailPac.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailPac.Name = "txtEmailPac";
             this.txtEmailPac.Size = new System.Drawing.Size(146, 23);
             this.txtEmailPac.TabIndex = 24;
@@ -285,7 +258,7 @@
             this.txtCpfPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtCpfPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtCpfPac.Location = new System.Drawing.Point(108, 180);
-            this.txtCpfPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCpfPac.Margin = new System.Windows.Forms.Padding(2);
             this.txtCpfPac.Name = "txtCpfPac";
             this.txtCpfPac.Size = new System.Drawing.Size(146, 23);
             this.txtCpfPac.TabIndex = 25;
@@ -295,7 +268,7 @@
             this.txtConfirmPasswordPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtConfirmPasswordPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtConfirmPasswordPac.Location = new System.Drawing.Point(454, 384);
-            this.txtConfirmPasswordPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirmPasswordPac.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmPasswordPac.Name = "txtConfirmPasswordPac";
             this.txtConfirmPasswordPac.Size = new System.Drawing.Size(146, 23);
             this.txtConfirmPasswordPac.TabIndex = 26;
@@ -305,7 +278,7 @@
             this.txtPasswordPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtPasswordPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtPasswordPac.Location = new System.Drawing.Point(454, 284);
-            this.txtPasswordPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPasswordPac.Margin = new System.Windows.Forms.Padding(2);
             this.txtPasswordPac.Name = "txtPasswordPac";
             this.txtPasswordPac.Size = new System.Drawing.Size(146, 23);
             this.txtPasswordPac.TabIndex = 27;
@@ -315,7 +288,7 @@
             this.txtUserPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtUserPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtUserPac.Location = new System.Drawing.Point(454, 176);
-            this.txtUserPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserPac.Margin = new System.Windows.Forms.Padding(2);
             this.txtUserPac.Name = "txtUserPac";
             this.txtUserPac.Size = new System.Drawing.Size(146, 23);
             this.txtUserPac.TabIndex = 28;
@@ -325,7 +298,7 @@
             this.txtFonePac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtFonePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtFonePac.Location = new System.Drawing.Point(142, 284);
-            this.txtFonePac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFonePac.Margin = new System.Windows.Forms.Padding(2);
             this.txtFonePac.Name = "txtFonePac";
             this.txtFonePac.Size = new System.Drawing.Size(146, 23);
             this.txtFonePac.TabIndex = 29;
@@ -334,18 +307,30 @@
             // 
             this.btnSaveRegistrationPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveRegistrationPac.Location = new System.Drawing.Point(647, 426);
-            this.btnSaveRegistrationPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveRegistrationPac.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveRegistrationPac.Name = "btnSaveRegistrationPac";
             this.btnSaveRegistrationPac.Size = new System.Drawing.Size(65, 35);
             this.btnSaveRegistrationPac.TabIndex = 30;
             this.btnSaveRegistrationPac.Text = "Salvar";
             this.btnSaveRegistrationPac.UseVisualStyleBackColor = true;
+            this.btnSaveRegistrationPac.Click += new System.EventHandler(this.btnSaveRegistrationPac_Click);
+            // 
+            // TxtCodSusPac
+            // 
+            this.TxtCodSusPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
+            this.TxtCodSusPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TxtCodSusPac.Location = new System.Drawing.Point(166, 330);
+            this.TxtCodSusPac.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtCodSusPac.Name = "TxtCodSusPac";
+            this.TxtCodSusPac.Size = new System.Drawing.Size(146, 23);
+            this.TxtCodSusPac.TabIndex = 31;
             // 
             // CadastroPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 470);
+            this.Controls.Add(this.TxtCodSusPac);
             this.Controls.Add(this.btnSaveRegistrationPac);
             this.Controls.Add(this.txtFonePac);
             this.Controls.Add(this.txtUserPac);
@@ -356,8 +341,6 @@
             this.Controls.Add(this.txtNamePac);
             this.Controls.Add(this.checkBoxAgreementYesPac);
             this.Controls.Add(this.checkBoxAgreementNoPac);
-            this.Controls.Add(this.checkBoxYesPac);
-            this.Controls.Add(this.checkBoxNoPac);
             this.Controls.Add(this.comboBoxAgreementPac);
             this.Controls.Add(this.lblUserPac);
             this.Controls.Add(this.lblConfirmPasswordPac);
@@ -369,12 +352,12 @@
             this.Controls.Add(this.lblCpfPac);
             this.Controls.Add(this.lblNamePac);
             this.Controls.Add(this.lblRegistrationMed);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.pictureBoxCadastroPac);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CadastroPaciente";
             this.Text = "CadastroPaciente";
             this.Load += new System.EventHandler(this.CadastroPaciente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroPac)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +365,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxCadastroPac;
         private System.Windows.Forms.Label lblRegistrationMed;
         private System.Windows.Forms.Label lblNamePac;
         private System.Windows.Forms.Label lblCpfPac;
@@ -394,8 +377,6 @@
         private System.Windows.Forms.Label lblConfirmPasswordPac;
         private System.Windows.Forms.Label lblUserPac;
         private System.Windows.Forms.ComboBox comboBoxAgreementPac;
-        private System.Windows.Forms.CheckBox checkBoxNoPac;
-        private System.Windows.Forms.CheckBox checkBoxYesPac;
         private System.Windows.Forms.CheckBox checkBoxAgreementNoPac;
         private System.Windows.Forms.CheckBox checkBoxAgreementYesPac;
         private System.Windows.Forms.TextBox txtNamePac;
@@ -406,5 +387,6 @@
         private System.Windows.Forms.TextBox txtUserPac;
         private System.Windows.Forms.TextBox txtFonePac;
         private System.Windows.Forms.Button btnSaveRegistrationPac;
+        private System.Windows.Forms.TextBox TxtCodSusPac;
     }
 }
