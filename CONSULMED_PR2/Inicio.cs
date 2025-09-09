@@ -38,6 +38,11 @@ namespace CONSULMED_PR2
             this.Hide(); // Esconde a tela inicial
 
         }
+
+        private void pictureBoxInicio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

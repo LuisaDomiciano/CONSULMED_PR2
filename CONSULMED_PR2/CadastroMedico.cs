@@ -46,52 +46,71 @@ namespace CONSULMED_PR2
 
         private void btnSaveRegistrationMed_Click(object sender, EventArgs e)
         {
-            string nome = txtNameMed.Text;
-            string cpf = txtCpfMed.Text;
-            string email = txtEmailMed.Text;
-            string telefone = txtFoneMed.Text;
-            string crm = txtCrm.Text;
-            bool atendeConvenio = checkBoxAgreementYesMed.Checked;
-            string convenios = comboBoxAgreementMed.Text;
-            string codConvenio = TxtCodAgreement.Text;
-            bool atendeSUS = checkBoxYesMed.Checked;
-            string codSUS = TxtCodSus.Text;
-            string usuario = txtUserMed.Text;
-            string senha = txtPasswordMed.Text;
-            string conexao = "Server=sqlexpress;Database=CJ3027392PR2;User Id=aluno;Password=aluno;";
-
-            using (SqlConnection con = new SqlConnection(conexao))
+            try
             {
-                string query = "INSERT INTO CadastroMedico (Nome, CPF, Email, Telefone, CRM, AtendeConvenio, Convenios, CodConvenio, AtendeSUS, CodSUS, Usuario, Senha) " +
-                               "VALUES (@Nome, @CPF, @Email, @Telefone, @CRM, @AtendeConvenio, @Convenios, @CodConvenio, @AtendeSUS, @CodSUS, @Usuario, @Senha)";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlConnection con = new SqlConnection(@"Data Source=sqlexpress;Initial Catalog=CJ3027392PR2;Integrated Security=True"))
                 {
-                    cmd.Parameters.AddWithValue("@Nome", nome);
-                    cmd.Parameters.AddWithValue("@CPF", cpf);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Telefone", telefone);
-                    cmd.Parameters.AddWithValue("@CRM", crm);
-                    cmd.Parameters.AddWithValue("@AtendeConvenio", atendeConvenio);
-                    cmd.Parameters.AddWithValue("@Convenios", convenios);
-                    cmd.Parameters.AddWithValue("@CodConvenio", codConvenio);
-                    cmd.Parameters.AddWithValue("@AtendeSUS", atendeSUS);
-                    cmd.Parameters.AddWithValue("@CodSUS", codSUS);
-                    cmd.Parameters.AddWithValue("@Usuario", usuario);
-                    cmd.Parameters.AddWithValue("@Senha", senha);
+                    con.Open();
 
-                    try
+                    string sql = @"INSERT INTO medico
+                      (NOME_MED, CPF_MED, EMAIL_MED, TELEFONE_MED, 
+                       CRM, COD_CONVENIO, COD_SUS_MED, 
+                       USUARIO_MED, SENHA_MED_US, CONFIRM_SENHA_MED_US)
+                       VALUES (@id, @nome, @cpf, @email, @telefone, 
+                               @crm, @convenio, @sus, 
+                               @usuario, @senha, @confSenha)";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
-                        con.Open();
+            
+                        string idGerado = Guid.NewGuid().ToString("N").Substring(0, 4);
+
+                        cmd.Parameters.AddWithValue("@id", idGerado);
+                        cmd.Parameters.AddWithValue("@nome", txtNameMed.Text.Trim());
+                        cmd.Parameters.AddWithValue("@cpf", txtCpfMed.Text.Trim());
+                        cmd.Parameters.AddWithValue("@email", txtEmailMed.Text.Trim());
+                        cmd.Parameters.AddWithValue("@telefone", txtFoneMed.Text.Trim());
+                        cmd.Parameters.AddWithValue("@crm", txtCrm.Text.Trim());
+
+                        // Se atende convênio
+                        if (checkBoxAgreementYesMed.Checked) 
+                            cmd.Parameters.AddWithValue("@convenio", TxtCodAgreement.Text.Trim());
+                        else
+                            cmd.Parameters.AddWithValue("@convenio", DBNull.Value);
+
+                        // Se atende SUS
+                        if (checkBoxYesMed.Checked)
+                            cmd.Parameters.AddWithValue("@sus", TxtCodSus.Text.Trim());
+                        else
+                            cmd.Parameters.AddWithValue("@sus", DBNull.Value);
+
+                        cmd.Parameters.AddWithValue("@usuario", txtUserMed.Text.Trim());
+                        cmd.Parameters.AddWithValue("@senha", txtPasswordMed.Text.Trim());
+                        cmd.Parameters.AddWithValue("@confSenha", txtConfirmPasswordMed.Text.Trim());
+
+                        // Executa o INSERT
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Dados salvos com sucesso!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro: " + ex.Message);
                     }
                 }
+
+                MessageBox.Show("✅ Médico cadastrado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Erro: " + ex.Message);
+            }
+
+
+            {
+
+
+
             }
         }
     }
 }
+
+                 
+            
+    
+
