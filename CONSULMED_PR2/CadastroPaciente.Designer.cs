@@ -65,6 +65,7 @@
             this.pictureBoxCadastroPac.Size = new System.Drawing.Size(744, 470);
             this.pictureBoxCadastroPac.TabIndex = 1;
             this.pictureBoxCadastroPac.TabStop = false;
+            this.pictureBoxCadastroPac.Click += new System.EventHandler(this.pictureBoxCadastroPac_Click);
             // 
             // lblRegistrationMed
             // 

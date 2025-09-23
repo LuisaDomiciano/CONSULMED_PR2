@@ -1,6 +1,6 @@
 ﻿namespace CONSULMED_PR2
 {
-    partial class AgendamentoPaciente
+    partial class ConsultasPaciente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgendamentoPaciente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultasPaciente));
             this.lblAgendamentosMed = new System.Windows.Forms.Label();
             this.LblFiltroPac = new System.Windows.Forms.Label();
             this.comboBoxFiltroMed = new System.Windows.Forms.ComboBox();
@@ -184,8 +184,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // AgendamentoPaciente
+            // ConsultasPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,8 +197,8 @@
             this.Controls.Add(this.LblFiltroPac);
             this.Controls.Add(this.lblAgendamentosMed);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "AgendamentoPaciente";
-            this.Text = "AgendamentoPaciente";
+            this.Name = "ConsultasPaciente";
+            this.Text = "ConsultasPaciente";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

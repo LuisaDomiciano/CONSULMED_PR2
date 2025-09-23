@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CONSULMED_PR2
 {
-    public partial class AgendamentoPaciente : Form
+    public partial class ConsultasPaciente : Form
     {
-        public AgendamentoPaciente()
+        public ConsultasPaciente()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

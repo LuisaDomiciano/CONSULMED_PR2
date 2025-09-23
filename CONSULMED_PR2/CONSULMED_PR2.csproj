@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgendamentoPaciente.cs">
+    <Compile Include="Agendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgendamentoPaciente.Designer.cs">
-      <DependentUpon>AgendamentoPaciente.cs</DependentUpon>
+    <Compile Include="Agendamento.Designer.cs">
+      <DependentUpon>Agendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultasPaciente.Designer.cs">
+      <DependentUpon>ConsultasPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroMedico.cs">
       <SubType>Form</SubType>
@@ -65,11 +71,11 @@
     <Compile Include="CadastroPaciente.Designer.cs">
       <DependentUpon>CadastroPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgendamentoMedico.cs">
+    <Compile Include="ConsultasMed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgendamentoMedico.Designer.cs">
-      <DependentUpon>AgendamentoMedico.cs</DependentUpon>
+    <Compile Include="ConsultasMed.Designer.cs">
+      <DependentUpon>ConsultasMed.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -91,8 +97,11 @@
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AgendamentoPaciente.resx">
-      <DependentUpon>AgendamentoPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="Agendamento.resx">
+      <DependentUpon>Agendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasPaciente.resx">
+      <DependentUpon>ConsultasPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroMedico.resx">
       <DependentUpon>CadastroMedico.cs</DependentUpon>
@@ -103,8 +112,8 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgendamentoMedico.resx">
-      <DependentUpon>AgendamentoMedico.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultasMed.resx">
+      <DependentUpon>ConsultasMed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -42,7 +42,7 @@
             // 
             this.LblWelcome.AutoSize = true;
             this.LblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
-            this.LblWelcome.Location = new System.Drawing.Point(393, 51);
+            this.LblWelcome.Location = new System.Drawing.Point(433, 47);
             this.LblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblWelcome.Name = "LblWelcome";
             this.LblWelcome.Size = new System.Drawing.Size(439, 73);
@@ -53,7 +53,7 @@
             // 
             this.LblWelcome2.AutoSize = true;
             this.LblWelcome2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
-            this.LblWelcome2.Location = new System.Drawing.Point(433, 148);
+            this.LblWelcome2.Location = new System.Drawing.Point(468, 142);
             this.LblWelcome2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblWelcome2.Name = "LblWelcome2";
             this.LblWelcome2.Size = new System.Drawing.Size(375, 73);
@@ -107,7 +107,7 @@
             this.pictureBoxInicio.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxInicio.Name = "pictureBoxInicio";
             this.pictureBoxInicio.Size = new System.Drawing.Size(912, 548);
-            this.pictureBoxInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInicio.TabIndex = 0;
             this.pictureBoxInicio.TabStop = false;
             this.pictureBoxInicio.Click += new System.EventHandler(this.pictureBoxInicio_Click);

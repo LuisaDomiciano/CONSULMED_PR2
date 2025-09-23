@@ -49,11 +49,14 @@ namespace CONSULMED_PR2
         }
 
         private void btnSaveRegistrationMed_Click(object sender, EventArgs e)
+
         {
             try
             {
                 // String de conexão com o banco (ajuste conforme seu servidor e banco de dados)
                 string connectionString = @"Server=sqlepress;Database=CJ3027392PR2;User Id=aluno;Password=aluno";
+
+
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
