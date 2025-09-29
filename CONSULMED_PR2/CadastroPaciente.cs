@@ -18,7 +18,7 @@ namespace CONSULMED_PR2
         // Ajuste a string de conexão para o seu servidor e banco
         string connectionString = @"Data Source=sqlexpress; Initial Catalog=CJ302392PR2;Integrated Security=True";
 
-        
+
 
         private void CadastroPaciente_Load(object sender, EventArgs e)
         {

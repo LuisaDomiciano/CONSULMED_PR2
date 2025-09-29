@@ -37,7 +37,7 @@
             this.LinkLblForgotPassword = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnEnter = new System.Windows.Forms.Button();
+            this.BtnEnterLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,24 +122,24 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+
             // 
-            // BtnEnter
+            // BtnEnterLogin
             // 
-            this.BtnEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(251)))));
-            this.BtnEnter.Location = new System.Drawing.Point(697, 405);
-            this.BtnEnter.Name = "BtnEnter";
-            this.BtnEnter.Size = new System.Drawing.Size(75, 23);
-            this.BtnEnter.TabIndex = 8;
-            this.BtnEnter.Text = "ENTRAR";
-            this.BtnEnter.UseVisualStyleBackColor = false;
-            this.BtnEnter.Click += new System.EventHandler(this.BtnEnter_Click);
+            this.BtnEnterLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(251)))));
+            this.BtnEnterLogin.Location = new System.Drawing.Point(697, 405);
+            this.BtnEnterLogin.Name = "BtnEnterLogin";
+            this.BtnEnterLogin.Size = new System.Drawing.Size(75, 23);
+            this.BtnEnterLogin.TabIndex = 8;
+            this.BtnEnterLogin.Text = "ENTRAR";
+            this.BtnEnterLogin.UseVisualStyleBackColor = false;
             // 
             // TxtLoginLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnEnter);
+            this.Controls.Add(this.BtnEnterLogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LinkLblForgotPassword);
             this.Controls.Add(this.LinkLblNotAccount);
@@ -166,6 +166,6 @@
         private System.Windows.Forms.LinkLabel LinkLblForgotPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button BtnEnter;
+        private System.Windows.Forms.Button BtnEnterLogin;
     }
 }

@@ -44,50 +44,32 @@ namespace CONSULMED_PR2
 
         }
 
-        private void BtnEnter_Click(object sender, EventArgs e);
+
 
 
         public partial class Login : Form
         {
             // Ajuste a string de conexão para o seu servidor/banco
-            string connectionString = @"Server=sqlepress;Database=CJ3027392PR2;User Id=aluno;Password=aluno";
 
             public Login()
             {
-  
+
             }
 
-            private void btnEntrar_Click(object sender, EventArgs e)
+
+
+
+            private void PictureBox1_Click(object sender, EventArgs e)
             {
-                string sql = @"INSERT INTO Login
-                          (Nome_PagLog, Senha_PagLog)
-                          VALUES (@NOME, @SENHA)";
 
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    try
-                    {
-                        conn.Open();
+            }
 
-                        using (SqlCommand cmd = new SqlCommand(sql, conn))
-                        {
-                            // Pegando dados das TextBox
-                            cmd.Parameters.AddWithValue("@NOME", TxtUsuarioLogin.Text);
-                            cmd.Parameters.AddWithValue("@SENHA", TxtPasswordLogin.Text);
+            private void pictureBox1_Click_1(object sender, EventArgs e)
+            {
 
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        MessageBox.Show("Dados de login salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro ao salvar: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    }
-                }
             }
         }
     }
+}
 
 
