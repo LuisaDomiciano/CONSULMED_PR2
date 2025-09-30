@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,11 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgendaMedica.Designer.cs">
+      <DependentUpon>AgendaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agendamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Agendamento.Designer.cs">
       <DependentUpon>Agendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelarConsultaMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelarConsultaMed.Designer.cs">
+      <DependentUpon>CancelarConsultaMed.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultasPaciente.cs">
       <SubType>Form</SubType>
@@ -77,6 +90,12 @@
     <Compile Include="ConsultasMed.Designer.cs">
       <DependentUpon>ConsultasMed.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoricoPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoricoPaciente.Designer.cs">
+      <DependentUpon>HistoricoPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +108,12 @@
     <Compile Include="MenuPrincipalMedico.Designer.cs">
       <DependentUpon>MenuPrincipalMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuPrincipalPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipalPaciente.Designer.cs">
+      <DependentUpon>MenuPrincipalPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -97,8 +122,20 @@
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReagendamentoMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReagendamentoMedico.Designer.cs">
+      <DependentUpon>ReagendamentoMedico.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgendaMedica.resx">
+      <DependentUpon>AgendaMedica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agendamento.resx">
       <DependentUpon>Agendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelarConsultaMed.resx">
+      <DependentUpon>CancelarConsultaMed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultasPaciente.resx">
       <DependentUpon>ConsultasPaciente.cs</DependentUpon>
@@ -108,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroPaciente.resx">
       <DependentUpon>CadastroPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoricoPaciente.resx">
+      <DependentUpon>HistoricoPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -121,6 +161,9 @@
     <EmbeddedResource Include="MenuPrincipalMedico.resx">
       <DependentUpon>MenuPrincipalMedico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipalPaciente.resx">
+      <DependentUpon>MenuPrincipalPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -131,6 +174,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReagendamentoMedico.resx">
+      <DependentUpon>ReagendamentoMedico.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,6 +201,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Design sem nome %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome %284%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

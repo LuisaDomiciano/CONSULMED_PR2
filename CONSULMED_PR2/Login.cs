@@ -28,16 +28,13 @@ namespace CONSULMED_PR2
 
         }
 
-        private void LinkLblNotAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLblNotAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)      
         {
-            Inicio telaInicio = new Inicio();
-
-            // Mostra o form de início
-            telaInicio.Show();
-
-            // Esconde ou fecha o form de login
+            Inicio inicio = new Inicio();
+            inicio.Show();
             this.Hide();
         }
+
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -69,7 +66,23 @@ namespace CONSULMED_PR2
 
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEnterLogin_Click(object sender, EventArgs e)
+        {
+      
+            // Exemplo sem validação de usuário
+            MenuPrincipalMedico menuMedico = new MenuPrincipalMedico();
+            menuMedico.Show();
+            this.Hide(); // esconde a tela de login
+        }
+
     }
 }
+
 
 

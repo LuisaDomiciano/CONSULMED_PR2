@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CONSULMED_PR2
 {
-    public partial class MenuPrincipalMedico : Form
+    public partial class ReagendamentoMedico : Form
     {
-        public MenuPrincipalMedico()
+        public ReagendamentoMedico()
         {
             InitializeComponent();
-        }
-
-        private void pictureBoxMenuMedico_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

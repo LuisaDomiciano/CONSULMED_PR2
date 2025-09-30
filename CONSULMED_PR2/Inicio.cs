@@ -24,13 +24,13 @@ namespace CONSULMED_PR2
         }
 
         private void btnInicialMed_Click(object sender, EventArgs e)
+
         {
-            CadastroMedico cadastroMedico = new CadastroMedico();
-            cadastroMedico.Show();
-            this.Hide(); // Esconde a tela inicial
-
+            CadastroMedico cadMed = new CadastroMedico();
+            cadMed.Show();
+            this.Hide();
         }
-
+        
         private void btnIncialPac_Click(object sender, EventArgs e)
         {
             CadastroPaciente cadastroPaciente = new CadastroPaciente();
