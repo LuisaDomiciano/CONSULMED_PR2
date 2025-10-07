@@ -21,5 +21,18 @@ namespace CONSULMED_PR2
         {
 
         }
+
+        private void BtnAgendaMenuMed_Click(object sender, EventArgs e)
+        {
+            // Abrir o formulário AgendaMedica
+            AgendaMedica agendaMedica = new AgendaMedica();
+            agendaMedica.Show(); // Mostra o novo formulário
+            this.Hide(); // Esconde o formulário atual (opcional)
+        }
+
+        private void BtnHistoricoMed_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,8 @@ using System.Windows.Forms;
 namespace CONSULMED_PR2
 {
     public partial class TxtLoginLog : Form
+
+
     {
         public TxtLoginLog()
         {
@@ -74,15 +76,64 @@ namespace CONSULMED_PR2
 
         private void BtnEnterLogin_Click(object sender, EventArgs e)
         {
-      
-            // Exemplo sem validação de usuário
-            MenuPrincipalMedico menuMedico = new MenuPrincipalMedico();
-            menuMedico.Show();
-            this.Hide(); // esconde a tela de login
+
+            // Capturar os valores digitados nas TextBox
+            string nomeLogin = TxtUsuarioLogin.Text.Trim();
+            string senhaLogin = TxtPasswordLogin.Text;
+
+            // Validação simples
+            if (string.IsNullOrEmpty(nomeLogin) || string.IsNullOrEmpty(senhaLogin))
+            {
+                MessageBox.Show("Por favor, preencha o login e a senha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 🔍 Verificar se o login existe no banco
+            string query = @"SELECT COUNT(*) FROM PaginaLog 
+                     WHERE Nome_PagLog = @Nome_PagLog AND Senha_PagLog = @Senha_PagLog";
+
+            // 💡 Colocando a conexão direto aqui
+            string connectionString = @"Data Source=sqlexpress;Initial Catalog=CJ3027392PR2;User ID=aluno;Password=aluno;";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Nome_PagLog", nomeLogin);
+                    cmd.Parameters.AddWithValue("@Senha_PagLog", senhaLogin);
+
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Login realizado com sucesso!", "Bem-vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        MenuPrincipalMedico menuMedico = new MenuPrincipalMedico();
+                        menuMedico.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nome de login ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar ao banco: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        private void TxtPasswordLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+
+    }
+
 
 
 
