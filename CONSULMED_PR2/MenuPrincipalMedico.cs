@@ -34,5 +34,19 @@ namespace CONSULMED_PR2
         {
 
         }
+
+        private void BtnHistoricoMed_Click_1(object sender, EventArgs e)
+        {
+            HistoricoMedico historicoMedico = new HistoricoMedico();
+            historicoMedico.Show();
+            this.Hide();
+        }
+
+        private void aaaaaa_Click(object sender, EventArgs e)
+        {
+            FormularioTriagem formularioTriagem = new FormularioTriagem();
+            formularioTriagem.Show();
+            this.Hide();
+        }
     }
 }

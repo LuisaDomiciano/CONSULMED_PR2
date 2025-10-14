@@ -90,6 +90,18 @@
     <Compile Include="ConsultasMed.Designer.cs">
       <DependentUpon>ConsultasMed.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioTriagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioTriagem.Designer.cs">
+      <DependentUpon>FormularioTriagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoricoMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoricoMedico.Designer.cs">
+      <DependentUpon>HistoricoMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="HistoricoPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroPaciente.resx">
       <DependentUpon>CadastroPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioTriagem.resx">
+      <DependentUpon>FormularioTriagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoricoMedico.resx">
+      <DependentUpon>HistoricoMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistoricoPaciente.resx">
       <DependentUpon>HistoricoPaciente.cs</DependentUpon>

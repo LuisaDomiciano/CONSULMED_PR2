@@ -34,6 +34,7 @@
             this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.BtnAgendaMenuMed = new System.Windows.Forms.Button();
             this.BtnHistoricoMed = new System.Windows.Forms.Button();
+            this.aaaaaa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuMedico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             this.pictureBoxMenuMedico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxMenuMedico.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenuMedico.Image")));
             this.pictureBoxMenuMedico.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxMenuMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxMenuMedico.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxMenuMedico.Name = "pictureBoxMenuMedico";
             this.pictureBoxMenuMedico.Size = new System.Drawing.Size(800, 450);
             this.pictureBoxMenuMedico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -62,7 +63,7 @@
             // BtnAgendaMenuMed
             // 
             this.BtnAgendaMenuMed.Location = new System.Drawing.Point(373, 173);
-            this.BtnAgendaMenuMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAgendaMenuMed.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAgendaMenuMed.Name = "BtnAgendaMenuMed";
             this.BtnAgendaMenuMed.Size = new System.Drawing.Size(56, 19);
             this.BtnAgendaMenuMed.TabIndex = 2;
@@ -73,19 +74,30 @@
             // BtnHistoricoMed
             // 
             this.BtnHistoricoMed.Location = new System.Drawing.Point(373, 224);
-            this.BtnHistoricoMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnHistoricoMed.Margin = new System.Windows.Forms.Padding(2);
             this.BtnHistoricoMed.Name = "BtnHistoricoMed";
             this.BtnHistoricoMed.Size = new System.Drawing.Size(56, 19);
             this.BtnHistoricoMed.TabIndex = 3;
             this.BtnHistoricoMed.Text = "Histórico";
             this.BtnHistoricoMed.UseVisualStyleBackColor = true;
-
+            this.BtnHistoricoMed.Click += new System.EventHandler(this.BtnHistoricoMed_Click_1);
+            // 
+            // aaaaaa
+            // 
+            this.aaaaaa.Location = new System.Drawing.Point(411, 331);
+            this.aaaaaa.Name = "aaaaaa";
+            this.aaaaaa.Size = new System.Drawing.Size(75, 23);
+            this.aaaaaa.TabIndex = 4;
+            this.aaaaaa.Text = "button1";
+            this.aaaaaa.UseVisualStyleBackColor = true;
+            this.aaaaaa.Click += new System.EventHandler(this.aaaaaa_Click);
             // 
             // MenuPrincipalMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.aaaaaa);
             this.Controls.Add(this.BtnHistoricoMed);
             this.Controls.Add(this.BtnAgendaMenuMed);
             this.Controls.Add(this.pictureBoxMenuMedico);
@@ -104,5 +116,6 @@
         private System.ServiceProcess.ServiceController serviceController1;
         private System.Windows.Forms.Button BtnAgendaMenuMed;
         private System.Windows.Forms.Button BtnHistoricoMed;
+        private System.Windows.Forms.Button aaaaaa;
     }
 }
