@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CONSULMED_PR2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace CONSULMED_PR2
 {
@@ -20,34 +20,47 @@ namespace CONSULMED_PR2
 
         // Comando SQL para inserir os dados
 
-        private const string InsertSql = @"INSERT INTO CadastroPaciente 
-    (NOME_PAC, CPF_PAC, EMAIL_PAC, TELEFONE_PAC, CODSUS_PAC, USUARIO_PAC, SENHA_PAC, CONFIRME_SENHA_PAC)
-    VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PAC, @SENHA_PAC, @CONFIRME_SENHA_PAC)";
+        private const string InsertSql = @"INSERT INTO CadastroPaciente
+(NOME_PAC, CPF_PAC, EMAIL_PAC, TELEFONE_PAC, CODSUS_PAC, USUARIO_PAC, SENHA_PAC, CONFIRME_SENHA_PAC)
+VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PAC, @SENHA_PAC, @CONFIRME_SENHA_PAC)";
 
 
-
-
+        public CadastroPaciente()
+        {
+            InitializeComponent();
+        }
         private void CadastroPaciente_Load(object sender, EventArgs e)
         {
+            // O ComboBox começa invisível
             comboBoxAgreementPac.Visible = false;
         }
 
+        private void radioButtonYes_CheckedChanged(object sender, EventArgs e)
+        {
+            // Mostra o ComboBox somente se "Sim" estiver marcado
+            if (radioButtonYes.Checked)
+            {
+                comboBoxAgreementPac.Visible = true;
+            }
+            else
+            {
+                comboBoxAgreementPac.Visible = false;
+            }
+        }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
+        private void radioButtonNo_CheckedChanged(object sender, EventArgs e)
+        {
+            // Esconde o ComboBox se "Não" estiver marcado
+            if (radioButtonNo.Checked)
+            {
+                comboBoxAgreementPac.Visible = false;
+            }
+        }
+
+        private void PictureBoxCadastroPac_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void checkBoxAgreementNoPac_CheckedChanged(object sender, EventArgs e)
-        {
-            comboBoxAgreementPac.Visible = false; // Esconder se marcado "Não"
-        }
-
-        private void CheckBoxAgreementYesPac_CheckedChanged(object sender, EventArgs e)
-        {
-            comboBoxAgreementPac.Visible = true; // Mostrar se marcado "Sim"
-        }
-
         private void btnSaveRegistrationPac_Click(object sender, EventArgs e)
         {
             // Aqui você pode salvar no banco os dados do paciente primeiro
@@ -134,6 +147,15 @@ namespace CONSULMED_PR2
         private void pictureBoxCadastroPac_Click(object sender, EventArgs e)
         {
 
+
+
+
+
+            CadastroPaciente cadastroPaciente = new CadastroPaciente();
+            cadastroPaciente.Show();
+            this.Hide(); // Esconde a tela inicial
+
         }
     }
 }
+ 

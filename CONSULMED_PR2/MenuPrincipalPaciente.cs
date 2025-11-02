@@ -21,5 +21,51 @@ namespace CONSULMED_PR2
         {
 
         }
+
+        private void MenuPrincipalPac(object sender, EventArgs e)
+        {
+            panelMenuPac.Visible = false;
+        }
+
+        bool menuExpandido = false;
+        private void BtnMenuPac_Click(object sender, EventArgs e)
+        {
+            panelMenuPac.Visible = !panelMenuPac.Visible;
+
+            timerMenuPac.Start();
+        }
+
+
+        private void timerMenuPac_Tick(object sender, EventArgs e)
+        {
+            if (menuExpandido)
+            {
+                panelMenuPac.Width -= 20;
+                if (panelMenuPac.Width <= 0)
+                {
+                    timerMenuPac.Stop();
+                    menuExpandido = false;
+                }
+            }
+            else
+            {
+                panelMenuPac.Width += 20;
+                if (panelMenuPac.Width >= 200)
+                {
+                    timerMenuPac.Stop();
+                    menuExpandido = true;
+                }
+            }
+
+        }
+
+        private void BtnAgendarConsultaPac_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+

@@ -60,6 +60,12 @@
     <Compile Include="Agendamento.Designer.cs">
       <DependentUpon>Agendamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroPaciente.Designer.cs">
+      <DependentUpon>CadastroPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="CancelarConsultaMed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +83,6 @@
     </Compile>
     <Compile Include="CadastroMedico.Designer.cs">
       <DependentUpon>CadastroMedico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroPaciente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroPaciente.Designer.cs">
-      <DependentUpon>CadastroPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultasMed.cs">
       <SubType>Form</SubType>
@@ -146,6 +146,9 @@
     <EmbeddedResource Include="Agendamento.resx">
       <DependentUpon>Agendamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastroPaciente.resx">
+      <DependentUpon>CadastroPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CancelarConsultaMed.resx">
       <DependentUpon>CancelarConsultaMed.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,9 +157,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroMedico.resx">
       <DependentUpon>CadastroMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadastroPaciente.resx">
-      <DependentUpon>CadastroPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioTriagem.resx">
       <DependentUpon>FormularioTriagem.cs</DependentUpon>
@@ -225,6 +225,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Design sem nome %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
