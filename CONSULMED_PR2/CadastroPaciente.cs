@@ -19,16 +19,20 @@ namespace CONSULMED_PR2
         private string connectionString = @"Data Source=sqlexpress;Initial Catalog=CJ3027392PR2;User ID=aluno;Password=aluno;";
 
         // Comando SQL para inserir os dados
-
         private const string InsertSql = @"INSERT INTO CadastroPaciente
 (NOME_PAC, CPF_PAC, EMAIL_PAC, TELEFONE_PAC, CODSUS_PAC, USUARIO_PAC, SENHA_PAC, CONFIRME_SENHA_PAC)
 VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PAC, @SENHA_PAC, @CONFIRME_SENHA_PAC)";
 
+        // Comando SQL para inserir também os dados de login
+        private const string InsertLoginSql = @"INSERT INTO PaginaLog
+(Nome_PagLog, Senha_PagLog)
+VALUES (@USUARIO, @SENHA)";
 
         public CadastroPaciente()
         {
             InitializeComponent();
         }
+
         private void CadastroPaciente_Load(object sender, EventArgs e)
         {
             // O ComboBox começa invisível
@@ -61,13 +65,9 @@ VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PA
         {
 
         }
+
         private void btnSaveRegistrationPac_Click(object sender, EventArgs e)
         {
-            // Aqui você pode salvar no banco os dados do paciente primeiro
-            MenuPrincipalPaciente menuPac = new MenuPrincipalPaciente();
-            menuPac.Show();
-            this.Hide();
-
             // Ler valores das textboxes (ajuste nomes se necessário)
             string nomePac = txtNamePac.Text.Trim();
             string cpfPac = txtCpfPac.Text.Trim();
@@ -77,7 +77,6 @@ VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PA
             string usuarioPac = txtUserPac.Text.Trim();
             string senhaPac = txtPasswordPac.Text;
             string confirmaPac = txtConfirmPasswordPac.Text;
-
 
             // Validações básicas
             if (string.IsNullOrEmpty(nomePac) || string.IsNullOrEmpty(cpfPac) || string.IsNullOrEmpty(usuarioPac) || string.IsNullOrEmpty(senhaPac))
@@ -94,9 +93,6 @@ VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PA
 
             // Converter valores opcionais para DBNull quando apropriado
             object dbCodConvenio = DBNull.Value;
-            // Se o médico atende convênio e foi informado o código, envia o valor; caso contrário deixa NULL
-
-
             object dbCodSus = string.IsNullOrEmpty(codSusPac) ? DBNull.Value : (object)codSusPac;
 
             try
@@ -104,33 +100,43 @@ VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PA
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 using (SqlCommand cmd = new SqlCommand(InsertSql, conn))
                 {
-                    // Adiciona parâmetros - use tipos se quiser maior controle (SqlDbType)
-                    cmd.Parameters.AddWithValue("@NOME_PAC", txtNamePac);
-                    cmd.Parameters.AddWithValue("@CPF_PAC", txtCpfPac);
-                    cmd.Parameters.AddWithValue("@EMAIL_PAC", txtEmailPac);
-                    cmd.Parameters.AddWithValue("@TELEFONE_PAC", txtFonePac);
-                    cmd.Parameters.AddWithValue("@CODSUS_PAC", TxtCodSusPac);
-                    cmd.Parameters.AddWithValue("@USUARIO_PAC", txtUserPac);
-                    cmd.Parameters.AddWithValue("@SENHA_PAC", txtPasswordPac);
-                    cmd.Parameters.AddWithValue("@CONFIRME_SENHA_PAC", txtConfirmPasswordPac);
+                    // Adiciona parâmetros
+                    cmd.Parameters.AddWithValue("@NOME_PAC", nomePac);
+                    cmd.Parameters.AddWithValue("@CPF_PAC", cpfPac);
+                    cmd.Parameters.AddWithValue("@EMAIL_PAC", emailPac);
+                    cmd.Parameters.AddWithValue("@TELEFONE_PAC", telefonePac);
+                    cmd.Parameters.AddWithValue("@CODSUS_PAC", codSusPac);
+                    cmd.Parameters.AddWithValue("@USUARIO_PAC", usuarioPac);
+                    cmd.Parameters.AddWithValue("@SENHA_PAC", senhaPac);
+                    cmd.Parameters.AddWithValue("@CONFIRME_SENHA_PAC", confirmaPac);
 
                     conn.Open();
+
+                    // Executa inserção na tabela de pacientes
                     int rows = cmd.ExecuteNonQuery();
 
+                    // Insere login apenas se o INSERT do paciente tiver sido bem-sucedido
                     if (rows > 0)
                     {
+                        using (SqlCommand cmdLogin = new SqlCommand(InsertLoginSql, conn))
+                        {
+                            cmdLogin.Parameters.AddWithValue("@USUARIO", usuarioPac);
+                            cmdLogin.Parameters.AddWithValue("@SENHA", senhaPac);
+                            cmdLogin.ExecuteNonQuery();
+                        }
+
                         MessageBox.Show("Cadastro salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Abre menu e esconde este form (como você já tinha)
-                        MenuPrincipalMedico menuMed = new MenuPrincipalMedico();
-                        menuMed.Show();
-                        this.Hide();
+                        MenuPrincipalPaciente menuPaciente = new MenuPrincipalPaciente();
+                        menuPaciente.Show();
+                        this.Hide(); // esconder o form de cadastro depois de abrir o menu
                     }
                     else
                     {
                         MessageBox.Show("Nenhuma linha inserida. Verifique os dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+
             }
             catch (SqlException ex)
             {
@@ -142,20 +148,12 @@ VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PA
                 MessageBox.Show("Erro inesperado:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
         }
 
         private void pictureBoxCadastroPac_Click(object sender, EventArgs e)
         {
 
-
-
-
-
-            CadastroPaciente cadastroPaciente = new CadastroPaciente();
-            cadastroPaciente.Show();
-            this.Hide(); // Esconde a tela inicial
-
         }
     }
 }
- 

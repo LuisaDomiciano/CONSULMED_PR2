@@ -43,9 +43,10 @@
             // 
             // panelMenuPac
             // 
-            this.panelMenuPac.Location = new System.Drawing.Point(925, 87);
+            this.panelMenuPac.Location = new System.Drawing.Point(694, 71);
+            this.panelMenuPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenuPac.Name = "panelMenuPac";
-            this.panelMenuPac.Size = new System.Drawing.Size(90, 544);
+            this.panelMenuPac.Size = new System.Drawing.Size(68, 442);
             this.panelMenuPac.TabIndex = 1;
             this.panelMenuPac.Visible = false;
             // 
@@ -54,8 +55,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1015, 619);
+            this.pictureBox1.Size = new System.Drawing.Size(761, 503);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -69,9 +71,10 @@
             // buttonHistoricoMenuPac
             // 
             this.buttonHistoricoMenuPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHistoricoMenuPac.Location = new System.Drawing.Point(370, 257);
+            this.buttonHistoricoMenuPac.Location = new System.Drawing.Point(278, 209);
+            this.buttonHistoricoMenuPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonHistoricoMenuPac.Name = "buttonHistoricoMenuPac";
-            this.buttonHistoricoMenuPac.Size = new System.Drawing.Size(202, 62);
+            this.buttonHistoricoMenuPac.Size = new System.Drawing.Size(152, 50);
             this.buttonHistoricoMenuPac.TabIndex = 3;
             this.buttonHistoricoMenuPac.Text = "Histórico";
             this.buttonHistoricoMenuPac.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@
             // BtnAgendarConsultaPac
             // 
             this.BtnAgendarConsultaPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgendarConsultaPac.Location = new System.Drawing.Point(370, 358);
+            this.BtnAgendarConsultaPac.Location = new System.Drawing.Point(278, 291);
+            this.BtnAgendarConsultaPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAgendarConsultaPac.Name = "BtnAgendarConsultaPac";
-            this.BtnAgendarConsultaPac.Size = new System.Drawing.Size(202, 63);
+            this.BtnAgendarConsultaPac.Size = new System.Drawing.Size(152, 51);
             this.BtnAgendarConsultaPac.TabIndex = 4;
             this.BtnAgendarConsultaPac.Text = "Agendar Consulta";
             this.BtnAgendarConsultaPac.UseVisualStyleBackColor = true;
@@ -90,12 +94,14 @@
             // BtnMinhasConsultasPac
             // 
             this.BtnMinhasConsultasPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMinhasConsultasPac.Location = new System.Drawing.Point(370, 456);
+            this.BtnMinhasConsultasPac.Location = new System.Drawing.Point(278, 370);
+            this.BtnMinhasConsultasPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnMinhasConsultasPac.Name = "BtnMinhasConsultasPac";
-            this.BtnMinhasConsultasPac.Size = new System.Drawing.Size(203, 63);
+            this.BtnMinhasConsultasPac.Size = new System.Drawing.Size(152, 51);
             this.BtnMinhasConsultasPac.TabIndex = 5;
             this.BtnMinhasConsultasPac.Text = "Minhas Consultas";
             this.BtnMinhasConsultasPac.UseVisualStyleBackColor = true;
+            this.BtnMinhasConsultasPac.Click += new System.EventHandler(this.BtnMinhasConsultasPac_Click);
             // 
             // LblConsulmedMenuPac
             // 
@@ -103,9 +109,10 @@
             this.LblConsulmedMenuPac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.LblConsulmedMenuPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblConsulmedMenuPac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(182)))), ((int)(((byte)(176)))));
-            this.LblConsulmedMenuPac.Location = new System.Drawing.Point(293, 60);
+            this.LblConsulmedMenuPac.Location = new System.Drawing.Point(220, 49);
+            this.LblConsulmedMenuPac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblConsulmedMenuPac.Name = "LblConsulmedMenuPac";
-            this.LblConsulmedMenuPac.Size = new System.Drawing.Size(450, 91);
+            this.LblConsulmedMenuPac.Size = new System.Drawing.Size(366, 73);
             this.LblConsulmedMenuPac.TabIndex = 6;
             this.LblConsulmedMenuPac.Text = "ConsulMed";
             // 
@@ -113,18 +120,19 @@
             // 
             this.BtnMenuPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMenuPac.Image = ((System.Drawing.Image)(resources.GetObject("BtnMenuPac.Image")));
-            this.BtnMenuPac.Location = new System.Drawing.Point(901, 60);
+            this.BtnMenuPac.Location = new System.Drawing.Point(676, 49);
+            this.BtnMenuPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnMenuPac.Name = "BtnMenuPac";
-            this.BtnMenuPac.Size = new System.Drawing.Size(84, 71);
+            this.BtnMenuPac.Size = new System.Drawing.Size(63, 58);
             this.BtnMenuPac.TabIndex = 2;
             this.BtnMenuPac.UseVisualStyleBackColor = true;
             this.BtnMenuPac.Click += new System.EventHandler(this.BtnMenuPac_Click);
             // 
             // MenuPrincipalPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 619);
+            this.ClientSize = new System.Drawing.Size(761, 503);
             this.Controls.Add(this.BtnMenuPac);
             this.Controls.Add(this.LblConsulmedMenuPac);
             this.Controls.Add(this.BtnMinhasConsultasPac);
@@ -132,6 +140,7 @@
             this.Controls.Add(this.buttonHistoricoMenuPac);
             this.Controls.Add(this.panelMenuPac);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuPrincipalPaciente";
             this.Text = "MenuPrincipalPaciente";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

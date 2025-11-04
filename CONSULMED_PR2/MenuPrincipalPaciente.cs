@@ -61,7 +61,26 @@ namespace CONSULMED_PR2
 
         private void BtnAgendarConsultaPac_Click(object sender, EventArgs e)
         {
+            // Cria uma nova instância do formulário de agendamento
+            AgendarConsultaPaciente formAgendar = new AgendarConsultaPaciente();
 
+            // Mostra o novo formulário
+            formAgendar.Show();
+
+            // Fecha ou esconde o MenuPaciente (você escolhe)
+            this.Hide(); // ou this.Close();
+        }
+
+        private void BtnMinhasConsultasPac_Click(object sender, EventArgs e)
+        {
+            // Cria uma nova instância do formulário de agendamento
+            ConsultasPaciente formConsultasPac = new ConsultasPaciente();
+
+            // Mostra o novo formulário
+            formConsultasPac.Show();
+
+            // Fecha ou esconde o MenuPaciente (você escolhe)
+            this.Hide(); // ou this.Close();
         }
     }
 }

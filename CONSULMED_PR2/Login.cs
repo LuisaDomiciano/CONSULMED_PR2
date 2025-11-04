@@ -110,8 +110,8 @@ namespace CONSULMED_PR2
                     {
                         MessageBox.Show("Login realizado com sucesso!", "Bem-vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        MenuPrincipalMedico menuMedico = new MenuPrincipalMedico();
-                        menuMedico.Show();
+                        MenuPrincipalPaciente menuPaciente = new MenuPrincipalPaciente();
+                        menuPaciente.Show();
                         this.Hide();
                     }
                     else
@@ -127,6 +127,11 @@ namespace CONSULMED_PR2
         }
 
         private void TxtPasswordLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LinkLblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
