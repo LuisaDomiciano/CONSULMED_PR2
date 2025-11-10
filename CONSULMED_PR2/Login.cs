@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,7 +32,7 @@ namespace CONSULMED_PR2
 
         }
 
-        private void LinkLblNotAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)      
+        private void LinkLblNotAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Inicio inicio = new Inicio();
             inicio.Show();
@@ -134,10 +136,63 @@ namespace CONSULMED_PR2
         private void LinkLblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            string emailUsuario = TxtUsuarioLogin.Text.Trim();
+
+            if (string.IsNullOrEmpty(emailUsuario))
+            {
+                MessageBox.Show("Digite seu e-mail antes de continuar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string codigo = new Random().Next(100000, 999999).ToString();
+
+            try
+            {
+                EnviarCodigoPorEmail(emailUsuario, codigo);
+                MessageBox.Show("Um código de verificação foi enviado para seu e-mail.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Opcional: abrir um novo formulário para redefinir a senha
+                // FrmRedefinirSenha frm = new FrmRedefinirSenha(emailUsuario, codigo);
+                // frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao enviar o e-mail: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // 🔹 MÉTODO AUXILIAR DE ENVIO DE E-MAIL
+        private void EnviarCodigoPorEmail(string destinatario, string codigo)
+        {
+            string remetente = "seuemail@gmail.com";
+            string senha = "sua-senha-de-app"; // senha de aplicativo do Gmail
+
+            // Criação da mensagem (escopo visível até o final do método)
+            MailMessage mensagem = new MailMessage();
+            mensagem.From = new MailAddress(remetente);
+            mensagem.To.Add(destinatario);
+            mensagem.Subject = "Recuperação de senha - CONSULMED";
+            mensagem.Body = $"Olá! Seu código para redefinir a senha é: {codigo}";
+            mensagem.IsBodyHtml = false;
+
+            // Configuração do servidor SMTP
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential(remetente, senha);
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.EnableSsl = true;
+
+            try
+            {
+                smtp.Send(mensagem); // ← aqui o objeto "mensagem" existe
+            }
+            catch (SmtpException smtpEx)
+            {
+                MessageBox.Show("Erro SMTP ao enviar o e-mail: " + smtpEx.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
-
-    }
+}
 
 
 
