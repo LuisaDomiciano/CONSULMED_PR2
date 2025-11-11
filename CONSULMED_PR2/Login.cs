@@ -10,7 +10,6 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace CONSULMED_PR2
 {
     public partial class TxtLoginLog : Form
@@ -90,30 +89,45 @@ namespace CONSULMED_PR2
                 return;
             }
 
-            // 🔍 Verificar se o login existe no banco
-            string query = @"SELECT COUNT(*) FROM PaginaLog 
-                     WHERE Nome_PagLog = @Nome_PagLog AND Senha_PagLog = @Senha_PagLog";
-
-            // 💡 Colocando a conexão direto aqui
+            // 💡 String de conexão
             string connectionString = @"Data Source=sqlexpress;Initial Catalog=CJ3027392PR2;User ID=aluno;Password=aluno;";
+
+            // 🔍 Queries para cada tabela
+            string queryPac = @"SELECT COUNT(*) FROM Pagina_LoginPac 
+                    WHERE Usuario_LogPac = @Usuario AND Senha_LogPac = @Senha";
+
+            string queryMed = @"SELECT COUNT(*) FROM Pagina_LoginMed 
+                    WHERE Usuario_LogMed = @Usuario AND Senha_LogMed = @Senha";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlCommand cmdPac = new SqlCommand(queryPac, conn))
+                using (SqlCommand cmdMed = new SqlCommand(queryMed, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Nome_PagLog", nomeLogin);
-                    cmd.Parameters.AddWithValue("@Senha_PagLog", senhaLogin);
+                    cmdPac.Parameters.AddWithValue("@Usuario", nomeLogin);
+                    cmdPac.Parameters.AddWithValue("@Senha", senhaLogin);
+
+                    cmdMed.Parameters.AddWithValue("@Usuario", nomeLogin);
+                    cmdMed.Parameters.AddWithValue("@Senha", senhaLogin);
 
                     conn.Open();
-                    int count = (int)cmd.ExecuteScalar();
 
-                    if (count > 0)
+                    int countPac = (int)cmdPac.ExecuteScalar();
+                    int countMed = (int)cmdMed.ExecuteScalar();
+
+                    if (countPac > 0)
                     {
-                        MessageBox.Show("Login realizado com sucesso!", "Bem-vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        MenuPrincipalPaciente menuPaciente = new MenuPrincipalPaciente();
-                        menuPaciente.Show();
+                        MessageBox.Show("Login de paciente realizado com sucesso!", "Bem-vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MenuPrincipalPaciente menuPac = new MenuPrincipalPaciente();
+                        menuPac.Show();
+                        this.Hide();
+                    }
+                    else if (countMed > 0)
+                    {
+                        MessageBox.Show("Login de médico realizado com sucesso!", "Bem-vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MenuPrincipalMedico menuMed = new MenuPrincipalMedico();
+                        menuMed.Show();
                         this.Hide();
                     }
                     else
@@ -135,65 +149,69 @@ namespace CONSULMED_PR2
 
         private void LinkLblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            string emailUsuario = TxtUsuarioLogin.Text.Trim();
-
-            if (string.IsNullOrEmpty(emailUsuario))
             {
-                MessageBox.Show("Digite seu e-mail antes de continuar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                // Fecha o form atual
+                this.Hide();
 
-            string codigo = new Random().Next(100000, 999999).ToString();
+                // Abre o form de redefinição de senha
+                RedefinirSenha RedefinirSenha = new RedefinirSenha();
+                RedefinirSenha.Show();
 
-            try
-            {
-                EnviarCodigoPorEmail(emailUsuario, codigo);
-                MessageBox.Show("Um código de verificação foi enviado para seu e-mail.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Exemplo: gerar e enviar código de recuperação
+                string emailUsuario = TxtUsuarioLogin.Text.Trim();
 
-                // Opcional: abrir um novo formulário para redefinir a senha
-                // FrmRedefinirSenha frm = new FrmRedefinirSenha(emailUsuario, codigo);
-                // frm.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao enviar o e-mail: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (string.IsNullOrEmpty(emailUsuario))
+                {
+                    MessageBox.Show("Digite o nome de usuário ou e-mail antes de redefinir a senha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Show();
+                    return;
+                }
+
+                string codigo = GerarCodigo();
+
+                try
+                {
+                    EnviarCodigoRecuperacao(emailUsuario, codigo);
+                    MessageBox.Show("Um código de recuperação foi enviado ao seu e-mail!", "Código enviado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao enviar código: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Show();
+                }
             }
         }
 
-        // 🔹 MÉTODO AUXILIAR DE ENVIO DE E-MAIL
-        private void EnviarCodigoPorEmail(string destinatario, string codigo)
+        // 🔢 Gera um código de 6 dígitos
+        private string GerarCodigo()
         {
-            string remetente = "seuemail@gmail.com";
-            string senha = "sua-senha-de-app"; // senha de aplicativo do Gmail
+            Random random = new Random();
+            return random.Next(100000, 999999).ToString();
+        }
 
-            // Criação da mensagem (escopo visível até o final do método)
-            MailMessage mensagem = new MailMessage();
-            mensagem.From = new MailAddress(remetente);
-            mensagem.To.Add(destinatario);
-            mensagem.Subject = "Recuperação de senha - CONSULMED";
-            mensagem.Body = $"Olá! Seu código para redefinir a senha é: {codigo}";
-            mensagem.IsBodyHtml = false;
-
-            // Configuração do servidor SMTP
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential(remetente, senha);
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.EnableSsl = true;
-
+        // ✉️ Envia o código para o e-mail
+        private void EnviarCodigoRecuperacao(string emailDestino, string codigo)
+        {
             try
             {
-                smtp.Send(mensagem); // ← aqui o objeto "mensagem" existe
+                MailMessage mail = new MailMessage();
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("testepr2sos@gmail.com");
+                mail.To.Add(emailDestino);
+                mail.Subject = "Código de Recuperação de Senha - CONSULMED";
+                mail.Body = $"Olá!\n\nSeu código de recuperação é: {codigo}\n\nAtenciosamente,\nEquipe CONSULMED";
+
+                smtp.Port = 587;
+                smtp.Credentials = new NetworkCredential("testepr2sos@gmail.com", "aleu stdb yode dtqc");
+                smtp.EnableSsl = true;
+
+                smtp.Send(mail);
             }
-            catch (SmtpException smtpEx)
+            catch
             {
-                MessageBox.Show("Erro SMTP ao enviar o e-mail: " + smtpEx.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw; // Deixa o erro subir para ser tratado no método chamador
             }
         }
     }
 }
-
-
-
-

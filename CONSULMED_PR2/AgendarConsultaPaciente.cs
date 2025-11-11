@@ -16,5 +16,30 @@ namespace CONSULMED_PR2
         {
             InitializeComponent();
         }
+
+        private void AgendarConsultaPaciente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBoxEspecialidadesAgendamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBoxMedicosAgendamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBoxHorariosAgendamentosPac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

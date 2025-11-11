@@ -126,7 +126,7 @@ namespace CONSULMED_PR2
                                 }
 
                                 // 2️⃣ Inserir na tabela PaginaLog
-                                string insertLogin = @"INSERT INTO PaginaLog (Nome_PagLog, Senha_PagLog) 
+                                string insertLogin = @"INSERT INTO Pagina_LoginMed (Usuario_LogMed, Senha_LogMed) 
                                    VALUES (@Usuario, @Senha)";
 
                                 using (SqlCommand cmdLogin = new SqlCommand(insertLogin, conn, transaction))
@@ -148,8 +148,8 @@ namespace CONSULMED_PR2
                                 MessageBox.Show("Cadastro salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 // Abre menu e esconde este form
-                                MenuPrincipalMedico menuMed = new MenuPrincipalMedico();
-                                menuMed.Show();
+                                InformaçõesMédico infoMed = new InformaçõesMédico();
+                                infoMed.Show();
                                 this.Hide();
                             }
                             catch (Exception ex)
@@ -170,6 +170,11 @@ namespace CONSULMED_PR2
                     MessageBox.Show("Erro inesperado:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void txtUserMed_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

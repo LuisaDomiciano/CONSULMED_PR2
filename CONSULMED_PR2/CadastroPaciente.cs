@@ -24,8 +24,8 @@ namespace CONSULMED_PR2
 VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PAC, @SENHA_PAC, @CONFIRME_SENHA_PAC)";
 
         // Comando SQL para inserir também os dados de login
-        private const string InsertLoginSql = @"INSERT INTO PaginaLog
-(Nome_PagLog, Senha_PagLog)
+        private const string InsertLoginSql = @"INSERT INTO Pagina_LoginPac
+(Usuario_LogPac, Senha_LogPac)
 VALUES (@USUARIO, @SENHA)";
 
         public CadastroPaciente()
@@ -127,8 +127,8 @@ VALUES (@USUARIO, @SENHA)";
 
                         MessageBox.Show("Cadastro salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        MenuPrincipalPaciente menuPaciente = new MenuPrincipalPaciente();
-                        menuPaciente.Show();
+                        FormularioTriagem triagem = new FormularioTriagem();
+                        triagem.Show();
                         this.Hide(); // esconder o form de cadastro depois de abrir o menu
                     }
                     else
