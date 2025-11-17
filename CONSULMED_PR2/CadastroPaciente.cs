@@ -127,8 +127,8 @@ VALUES (@USUARIO, @SENHA)";
 
                         MessageBox.Show("Cadastro salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        FormularioTriagem triagem = new FormularioTriagem();
-                        triagem.Show();
+                        MenuPrincipalPaciente MenuPaciente = new MenuPrincipalPaciente();
+                        MenuPaciente.Show();
                         this.Hide(); // esconder o form de cadastro depois de abrir o menu
                     }
                     else

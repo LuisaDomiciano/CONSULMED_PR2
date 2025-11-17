@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnSetaNextAgendarPac.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAECSURBVEhL7ZY9ioJBDIYfF7Vd9ATaeAcrtXKrbcRW9ARe
+        wcreQ2gheAwr76CyC7uKpWDlH4GvkJCvy3yj4ANvNQkvzCSZwJsnoQscgH9goA9DkUtMbw+aAyUdGIK9
+        Mhb9AA0d6M03cDTML8AYKOgET6rA0jAXrYCaTvAkD4yAs2F+AoY6wZs6sDbMRQugrBM8+QSmhrFICq+p
+        E7zppRTeFZgARZ3gSSVm4UlLSWtJi2lzuZG2TvBG3lbeWJtvdaA3acYbHehFlKuOMtUybycZIDPDUBRs
+        gLSAX8NQFGRkRvkkohTQV0oBBV8E/gzT4KvPh7FzZbbsdYBdMm/7+vDNS3AHIQGTbnur5LcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
 </root>
