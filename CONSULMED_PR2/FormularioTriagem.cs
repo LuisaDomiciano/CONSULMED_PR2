@@ -69,6 +69,11 @@ namespace CONSULMED_PR2
         {
 
         }
+
+        private void RbGeneroFem_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

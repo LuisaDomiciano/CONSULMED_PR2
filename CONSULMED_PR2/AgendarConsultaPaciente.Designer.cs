@@ -61,7 +61,7 @@
             "Pneumologia",
             "Geriatria"});
             this.ComboBoxEspecialidadesAgendamento.Location = new System.Drawing.Point(399, 210);
-            this.ComboBoxEspecialidadesAgendamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboBoxEspecialidadesAgendamento.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBoxEspecialidadesAgendamento.Name = "ComboBoxEspecialidadesAgendamento";
             this.ComboBoxEspecialidadesAgendamento.Size = new System.Drawing.Size(287, 37);
             this.ComboBoxEspecialidadesAgendamento.TabIndex = 0;
@@ -73,7 +73,7 @@
             this.ComboBoxMedicosAgendamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBoxMedicosAgendamentos.FormattingEnabled = true;
             this.ComboBoxMedicosAgendamentos.Location = new System.Drawing.Point(399, 275);
-            this.ComboBoxMedicosAgendamentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboBoxMedicosAgendamentos.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBoxMedicosAgendamentos.Name = "ComboBoxMedicosAgendamentos";
             this.ComboBoxMedicosAgendamentos.Size = new System.Drawing.Size(287, 37);
             this.ComboBoxMedicosAgendamentos.TabIndex = 1;
@@ -85,7 +85,7 @@
             this.ComboBoxHorariosAgendamentosPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBoxHorariosAgendamentosPac.FormattingEnabled = true;
             this.ComboBoxHorariosAgendamentosPac.Location = new System.Drawing.Point(399, 402);
-            this.ComboBoxHorariosAgendamentosPac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboBoxHorariosAgendamentosPac.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBoxHorariosAgendamentosPac.Name = "ComboBoxHorariosAgendamentosPac";
             this.ComboBoxHorariosAgendamentosPac.Size = new System.Drawing.Size(287, 37);
             this.ComboBoxHorariosAgendamentosPac.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(399, 337);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(287, 34);
             this.dateTimePicker1.TabIndex = 4;
@@ -121,6 +121,7 @@
             this.BtnSetaNextAgendarPac.Size = new System.Drawing.Size(38, 35);
             this.BtnSetaNextAgendarPac.TabIndex = 6;
             this.BtnSetaNextAgendarPac.UseVisualStyleBackColor = true;
+            this.BtnSetaNextAgendarPac.Click += new System.EventHandler(this.BtnSetaNextAgendarPac_Click);
             // 
             // BtnNextAgendarPac
             // 
@@ -131,6 +132,7 @@
             this.BtnNextAgendarPac.TabIndex = 7;
             this.BtnNextAgendarPac.Text = "Próximo";
             this.BtnNextAgendarPac.UseVisualStyleBackColor = true;
+            this.BtnNextAgendarPac.Click += new System.EventHandler(this.BtnNextAgendarPac_Click);
             // 
             // AgendarConsultaPaciente
             // 
@@ -144,7 +146,7 @@
             this.Controls.Add(this.ComboBoxHorariosAgendamentosPac);
             this.Controls.Add(this.ComboBoxMedicosAgendamentos);
             this.Controls.Add(this.ComboBoxEspecialidadesAgendamento);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgendarConsultaPaciente";
             this.Text = "AgendarConsultaPaciente";
             this.Load += new System.EventHandler(this.AgendarConsultaPaciente_Load);

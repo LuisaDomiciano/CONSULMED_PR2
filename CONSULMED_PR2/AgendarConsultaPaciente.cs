@@ -41,5 +41,20 @@ namespace CONSULMED_PR2
         {
 
         }
+
+        private void BtnNextAgendarPac_Click(object sender, EventArgs e)
+        {
+            FormularioTriagem triagem = new FormularioTriagem();
+            triagem.Show();
+            this.Hide(); // esconder o form de cadastro depois de abrir o menu
+        }
+
+        private void BtnSetaNextAgendarPac_Click(object sender, EventArgs e)
+        {
+            FormularioTriagem triagem = new FormularioTriagem();
+            triagem.Show();
+            this.Hide(); // esconder o form de cadastro depois de abrir o menu
+
+        }
     }
 }
