@@ -78,6 +78,12 @@
     <Compile Include="CancelarConsultaMed.Designer.cs">
       <DependentUpon>CancelarConsultaMed.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultasMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultasMedico.Designer.cs">
+      <DependentUpon>ConsultasMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultasPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CancelarConsultaMed.resx">
       <DependentUpon>CancelarConsultaMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasMedico.resx">
+      <DependentUpon>ConsultasMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultasPaciente.resx">
       <DependentUpon>ConsultasPaciente.cs</DependentUpon>

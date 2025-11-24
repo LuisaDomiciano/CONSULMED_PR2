@@ -41,8 +41,21 @@
             this.LblGenero = new System.Windows.Forms.Label();
             this.LblPeso = new System.Windows.Forms.Label();
             this.panelConteudo = new System.Windows.Forms.Panel();
+            this.groupBoxAtvFisica = new System.Windows.Forms.GroupBox();
+            this.RbSedentario = new System.Windows.Forms.RadioButton();
+            this.RbAtvidadeFisicaLeve = new System.Windows.Forms.RadioButton();
             this.RbAtvidadeFisicaModerada = new System.Windows.Forms.RadioButton();
             this.RbAtividadeFisicaIntensa = new System.Windows.Forms.RadioButton();
+            this.groupBoxMedicamentos = new System.Windows.Forms.GroupBox();
+            this.RbMedicamentosNão = new System.Windows.Forms.RadioButton();
+            this.RbMedicamentosSim = new System.Windows.Forms.RadioButton();
+            this.textBoxMedicamentos = new System.Windows.Forms.TextBox();
+            this.groupBoxGenero = new System.Windows.Forms.GroupBox();
+            this.RbGeneroFem = new System.Windows.Forms.RadioButton();
+            this.RbGeneroMasc = new System.Windows.Forms.RadioButton();
+            this.RbGeneroNaoDeclarado = new System.Windows.Forms.RadioButton();
+            this.BtnSetaNextAgendarPac = new System.Windows.Forms.Button();
+            this.BtnNextAgendarPac = new System.Windows.Forms.Button();
             this.RbCirurgiaSim = new System.Windows.Forms.RadioButton();
             this.RbCirurgiaNao = new System.Windows.Forms.RadioButton();
             this.RbNoSmoker = new System.Windows.Forms.RadioButton();
@@ -57,28 +70,31 @@
             this.RbConsumoBebidaFrequentemente = new System.Windows.Forms.RadioButton();
             this.RbConsumoBebidaSocial = new System.Windows.Forms.RadioButton();
             this.RbConsumoBebidaNãoconsumo = new System.Windows.Forms.RadioButton();
-            this.RbSedentario = new System.Windows.Forms.RadioButton();
-            this.RbMedicamentosNão = new System.Windows.Forms.RadioButton();
-            this.RbAtvidadeFisicaLeve = new System.Windows.Forms.RadioButton();
-            this.RbMedicamentosSim = new System.Windows.Forms.RadioButton();
-            this.textBoxMedicamentos = new System.Windows.Forms.TextBox();
             this.TxtDoencasCronicas = new System.Windows.Forms.TextBox();
             this.TxtAlergia = new System.Windows.Forms.TextBox();
             this.TxtDoencasHereditarias = new System.Windows.Forms.TextBox();
             this.TxtCirurgia = new System.Windows.Forms.TextBox();
             this.TxtMotivoConsultaPac = new System.Windows.Forms.TextBox();
             this.TxtPesoPac = new System.Windows.Forms.TextBox();
-            this.RbGeneroNaoDeclarado = new System.Windows.Forms.RadioButton();
-            this.RbGeneroMasc = new System.Windows.Forms.RadioButton();
-            this.RbGeneroFem = new System.Windows.Forms.RadioButton();
             this.LblMotivoConsultaPac = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.LblCirurgia = new System.Windows.Forms.Label();
-            this.BtnNextAgendarPac = new System.Windows.Forms.Button();
-            this.BtnSetaNextAgendarPac = new System.Windows.Forms.Button();
-            this.groupBoxGenero = new System.Windows.Forms.GroupBox();
+            this.groupBoxAlergia = new System.Windows.Forms.GroupBox();
+            this.groupBoxDoencasCronicas = new System.Windows.Forms.GroupBox();
+            this.groupBoxConsumoBebidas = new System.Windows.Forms.GroupBox();
+            this.groupBoxDoencasHereditarias = new System.Windows.Forms.GroupBox();
+            this.groupBoxSmoker = new System.Windows.Forms.GroupBox();
+            this.groupBoxCirurgia = new System.Windows.Forms.GroupBox();
             this.panelConteudo.SuspendLayout();
+            this.groupBoxAtvFisica.SuspendLayout();
+            this.groupBoxMedicamentos.SuspendLayout();
             this.groupBoxGenero.SuspendLayout();
+            this.groupBoxAlergia.SuspendLayout();
+            this.groupBoxDoencasCronicas.SuspendLayout();
+            this.groupBoxConsumoBebidas.SuspendLayout();
+            this.groupBoxDoencasHereditarias.SuspendLayout();
+            this.groupBoxSmoker.SuspendLayout();
+            this.groupBoxCirurgia.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblDoencasCronicas
@@ -208,34 +224,17 @@
             // panelConteudo
             // 
             this.panelConteudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
+            this.panelConteudo.Controls.Add(this.groupBoxSmoker);
+            this.panelConteudo.Controls.Add(this.groupBoxCirurgia);
+            this.panelConteudo.Controls.Add(this.groupBoxDoencasHereditarias);
+            this.panelConteudo.Controls.Add(this.groupBoxDoencasCronicas);
+            this.panelConteudo.Controls.Add(this.groupBoxConsumoBebidas);
+            this.panelConteudo.Controls.Add(this.groupBoxAlergia);
+            this.panelConteudo.Controls.Add(this.groupBoxAtvFisica);
+            this.panelConteudo.Controls.Add(this.groupBoxMedicamentos);
             this.panelConteudo.Controls.Add(this.groupBoxGenero);
             this.panelConteudo.Controls.Add(this.BtnSetaNextAgendarPac);
             this.panelConteudo.Controls.Add(this.BtnNextAgendarPac);
-            this.panelConteudo.Controls.Add(this.RbAtvidadeFisicaModerada);
-            this.panelConteudo.Controls.Add(this.RbAtividadeFisicaIntensa);
-            this.panelConteudo.Controls.Add(this.RbCirurgiaSim);
-            this.panelConteudo.Controls.Add(this.RbCirurgiaNao);
-            this.panelConteudo.Controls.Add(this.RbNoSmoker);
-            this.panelConteudo.Controls.Add(this.RbOcasionalmente);
-            this.panelConteudo.Controls.Add(this.radioButton17);
-            this.panelConteudo.Controls.Add(this.RbDoencasHereditariasNao);
-            this.panelConteudo.Controls.Add(this.RbDoencasHereditariasSim);
-            this.panelConteudo.Controls.Add(this.RbAlergiaNao);
-            this.panelConteudo.Controls.Add(this.RbAlergiaSim);
-            this.panelConteudo.Controls.Add(this.RbDoencasCronicasNao);
-            this.panelConteudo.Controls.Add(this.RbDoencasCronicasSim);
-            this.panelConteudo.Controls.Add(this.RbConsumoBebidaFrequentemente);
-            this.panelConteudo.Controls.Add(this.RbConsumoBebidaSocial);
-            this.panelConteudo.Controls.Add(this.RbConsumoBebidaNãoconsumo);
-            this.panelConteudo.Controls.Add(this.RbSedentario);
-            this.panelConteudo.Controls.Add(this.RbMedicamentosNão);
-            this.panelConteudo.Controls.Add(this.RbAtvidadeFisicaLeve);
-            this.panelConteudo.Controls.Add(this.RbMedicamentosSim);
-            this.panelConteudo.Controls.Add(this.textBoxMedicamentos);
-            this.panelConteudo.Controls.Add(this.TxtDoencasCronicas);
-            this.panelConteudo.Controls.Add(this.TxtAlergia);
-            this.panelConteudo.Controls.Add(this.TxtDoencasHereditarias);
-            this.panelConteudo.Controls.Add(this.TxtCirurgia);
             this.panelConteudo.Controls.Add(this.TxtMotivoConsultaPac);
             this.panelConteudo.Controls.Add(this.TxtPesoPac);
             this.panelConteudo.Controls.Add(this.LblMotivoConsultaPac);
@@ -256,10 +255,44 @@
             this.panelConteudo.TabIndex = 12;
             this.panelConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // groupBoxAtvFisica
+            // 
+            this.groupBoxAtvFisica.Controls.Add(this.RbSedentario);
+            this.groupBoxAtvFisica.Controls.Add(this.RbAtvidadeFisicaLeve);
+            this.groupBoxAtvFisica.Controls.Add(this.RbAtvidadeFisicaModerada);
+            this.groupBoxAtvFisica.Controls.Add(this.RbAtividadeFisicaIntensa);
+            this.groupBoxAtvFisica.Location = new System.Drawing.Point(338, 219);
+            this.groupBoxAtvFisica.Name = "groupBoxAtvFisica";
+            this.groupBoxAtvFisica.Size = new System.Drawing.Size(537, 90);
+            this.groupBoxAtvFisica.TabIndex = 52;
+            this.groupBoxAtvFisica.TabStop = false;
+            // 
+            // RbSedentario
+            // 
+            this.RbSedentario.AutoSize = true;
+            this.RbSedentario.Location = new System.Drawing.Point(4, 12);
+            this.RbSedentario.Name = "RbSedentario";
+            this.RbSedentario.Size = new System.Drawing.Size(219, 20);
+            this.RbSedentario.TabIndex = 31;
+            this.RbSedentario.TabStop = true;
+            this.RbSedentario.Text = "Sedentário (nenhuma atividade)";
+            this.RbSedentario.UseVisualStyleBackColor = true;
+            // 
+            // RbAtvidadeFisicaLeve
+            // 
+            this.RbAtvidadeFisicaLeve.AutoSize = true;
+            this.RbAtvidadeFisicaLeve.Location = new System.Drawing.Point(6, 59);
+            this.RbAtvidadeFisicaLeve.Name = "RbAtvidadeFisicaLeve";
+            this.RbAtvidadeFisicaLeve.Size = new System.Drawing.Size(221, 20);
+            this.RbAtvidadeFisicaLeve.TabIndex = 29;
+            this.RbAtvidadeFisicaLeve.TabStop = true;
+            this.RbAtvidadeFisicaLeve.Text = "Leve (caminhada, alongamento)";
+            this.RbAtvidadeFisicaLeve.UseVisualStyleBackColor = true;
+            // 
             // RbAtvidadeFisicaModerada
             // 
             this.RbAtvidadeFisicaModerada.AutoSize = true;
-            this.RbAtvidadeFisicaModerada.Location = new System.Drawing.Point(596, 232);
+            this.RbAtvidadeFisicaModerada.Location = new System.Drawing.Point(257, 12);
             this.RbAtvidadeFisicaModerada.Name = "RbAtvidadeFisicaModerada";
             this.RbAtvidadeFisicaModerada.Size = new System.Drawing.Size(269, 20);
             this.RbAtvidadeFisicaModerada.TabIndex = 47;
@@ -271,7 +304,7 @@
             // RbAtividadeFisicaIntensa
             // 
             this.RbAtividadeFisicaIntensa.AutoSize = true;
-            this.RbAtividadeFisicaIntensa.Location = new System.Drawing.Point(596, 273);
+            this.RbAtividadeFisicaIntensa.Location = new System.Drawing.Point(257, 58);
             this.RbAtividadeFisicaIntensa.Name = "RbAtividadeFisicaIntensa";
             this.RbAtividadeFisicaIntensa.Size = new System.Drawing.Size(224, 20);
             this.RbAtividadeFisicaIntensa.TabIndex = 46;
@@ -280,176 +313,21 @@
             this.RbAtividadeFisicaIntensa.UseVisualStyleBackColor = true;
             this.RbAtividadeFisicaIntensa.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // RbCirurgiaSim
+            // groupBoxMedicamentos
             // 
-            this.RbCirurgiaSim.AutoSize = true;
-            this.RbCirurgiaSim.Location = new System.Drawing.Point(399, 695);
-            this.RbCirurgiaSim.Name = "RbCirurgiaSim";
-            this.RbCirurgiaSim.Size = new System.Drawing.Size(51, 20);
-            this.RbCirurgiaSim.TabIndex = 45;
-            this.RbCirurgiaSim.TabStop = true;
-            this.RbCirurgiaSim.Text = "Sim";
-            this.RbCirurgiaSim.UseVisualStyleBackColor = true;
-            // 
-            // RbCirurgiaNao
-            // 
-            this.RbCirurgiaNao.AutoSize = true;
-            this.RbCirurgiaNao.Location = new System.Drawing.Point(327, 695);
-            this.RbCirurgiaNao.Name = "RbCirurgiaNao";
-            this.RbCirurgiaNao.Size = new System.Drawing.Size(54, 20);
-            this.RbCirurgiaNao.TabIndex = 44;
-            this.RbCirurgiaNao.TabStop = true;
-            this.RbCirurgiaNao.Text = "Não";
-            this.RbCirurgiaNao.UseVisualStyleBackColor = true;
-            // 
-            // RbNoSmoker
-            // 
-            this.RbNoSmoker.AutoSize = true;
-            this.RbNoSmoker.Location = new System.Drawing.Point(213, 621);
-            this.RbNoSmoker.Name = "RbNoSmoker";
-            this.RbNoSmoker.Size = new System.Drawing.Size(86, 20);
-            this.RbNoSmoker.TabIndex = 43;
-            this.RbNoSmoker.TabStop = true;
-            this.RbNoSmoker.Text = "Não fumo";
-            this.RbNoSmoker.UseVisualStyleBackColor = true;
-            // 
-            // RbOcasionalmente
-            // 
-            this.RbOcasionalmente.AutoSize = true;
-            this.RbOcasionalmente.Location = new System.Drawing.Point(350, 620);
-            this.RbOcasionalmente.Name = "RbOcasionalmente";
-            this.RbOcasionalmente.Size = new System.Drawing.Size(126, 20);
-            this.RbOcasionalmente.TabIndex = 42;
-            this.RbOcasionalmente.TabStop = true;
-            this.RbOcasionalmente.Text = "Ocasionalmente";
-            this.RbOcasionalmente.UseVisualStyleBackColor = true;
-            // 
-            // radioButton17
-            // 
-            this.radioButton17.AutoSize = true;
-            this.radioButton17.Location = new System.Drawing.Point(494, 622);
-            this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(101, 20);
-            this.radioButton17.TabIndex = 41;
-            this.radioButton17.TabStop = true;
-            this.radioButton17.Text = "Diariamente";
-            this.radioButton17.UseVisualStyleBackColor = true;
-            // 
-            // RbDoencasHereditariasNao
-            // 
-            this.RbDoencasHereditariasNao.AutoSize = true;
-            this.RbDoencasHereditariasNao.Location = new System.Drawing.Point(461, 543);
-            this.RbDoencasHereditariasNao.Name = "RbDoencasHereditariasNao";
-            this.RbDoencasHereditariasNao.Size = new System.Drawing.Size(54, 20);
-            this.RbDoencasHereditariasNao.TabIndex = 40;
-            this.RbDoencasHereditariasNao.TabStop = true;
-            this.RbDoencasHereditariasNao.Text = "Não";
-            this.RbDoencasHereditariasNao.UseVisualStyleBackColor = true;
-            // 
-            // RbDoencasHereditariasSim
-            // 
-            this.RbDoencasHereditariasSim.AutoSize = true;
-            this.RbDoencasHereditariasSim.Location = new System.Drawing.Point(536, 543);
-            this.RbDoencasHereditariasSim.Name = "RbDoencasHereditariasSim";
-            this.RbDoencasHereditariasSim.Size = new System.Drawing.Size(51, 20);
-            this.RbDoencasHereditariasSim.TabIndex = 39;
-            this.RbDoencasHereditariasSim.TabStop = true;
-            this.RbDoencasHereditariasSim.Text = "Sim";
-            this.RbDoencasHereditariasSim.UseVisualStyleBackColor = true;
-            // 
-            // RbAlergiaNao
-            // 
-            this.RbAlergiaNao.AutoSize = true;
-            this.RbAlergiaNao.Location = new System.Drawing.Point(237, 481);
-            this.RbAlergiaNao.Name = "RbAlergiaNao";
-            this.RbAlergiaNao.Size = new System.Drawing.Size(54, 20);
-            this.RbAlergiaNao.TabIndex = 38;
-            this.RbAlergiaNao.TabStop = true;
-            this.RbAlergiaNao.Text = "Não";
-            this.RbAlergiaNao.UseVisualStyleBackColor = true;
-            // 
-            // RbAlergiaSim
-            // 
-            this.RbAlergiaSim.AutoSize = true;
-            this.RbAlergiaSim.Location = new System.Drawing.Point(350, 481);
-            this.RbAlergiaSim.Name = "RbAlergiaSim";
-            this.RbAlergiaSim.Size = new System.Drawing.Size(51, 20);
-            this.RbAlergiaSim.TabIndex = 37;
-            this.RbAlergiaSim.TabStop = true;
-            this.RbAlergiaSim.Text = "Sim";
-            this.RbAlergiaSim.UseVisualStyleBackColor = true;
-            // 
-            // RbDoencasCronicasNao
-            // 
-            this.RbDoencasCronicasNao.AutoSize = true;
-            this.RbDoencasCronicasNao.Location = new System.Drawing.Point(327, 408);
-            this.RbDoencasCronicasNao.Name = "RbDoencasCronicasNao";
-            this.RbDoencasCronicasNao.Size = new System.Drawing.Size(54, 20);
-            this.RbDoencasCronicasNao.TabIndex = 36;
-            this.RbDoencasCronicasNao.TabStop = true;
-            this.RbDoencasCronicasNao.Text = "Não";
-            this.RbDoencasCronicasNao.UseVisualStyleBackColor = true;
-            // 
-            // RbDoencasCronicasSim
-            // 
-            this.RbDoencasCronicasSim.AutoSize = true;
-            this.RbDoencasCronicasSim.Location = new System.Drawing.Point(399, 408);
-            this.RbDoencasCronicasSim.Name = "RbDoencasCronicasSim";
-            this.RbDoencasCronicasSim.Size = new System.Drawing.Size(51, 20);
-            this.RbDoencasCronicasSim.TabIndex = 35;
-            this.RbDoencasCronicasSim.TabStop = true;
-            this.RbDoencasCronicasSim.Text = "Sim";
-            this.RbDoencasCronicasSim.UseVisualStyleBackColor = true;
-            // 
-            // RbConsumoBebidaFrequentemente
-            // 
-            this.RbConsumoBebidaFrequentemente.AutoSize = true;
-            this.RbConsumoBebidaFrequentemente.Location = new System.Drawing.Point(680, 338);
-            this.RbConsumoBebidaFrequentemente.Name = "RbConsumoBebidaFrequentemente";
-            this.RbConsumoBebidaFrequentemente.Size = new System.Drawing.Size(126, 20);
-            this.RbConsumoBebidaFrequentemente.TabIndex = 34;
-            this.RbConsumoBebidaFrequentemente.TabStop = true;
-            this.RbConsumoBebidaFrequentemente.Text = "Frequentemente";
-            this.RbConsumoBebidaFrequentemente.UseVisualStyleBackColor = true;
-            this.RbConsumoBebidaFrequentemente.CheckedChanged += new System.EventHandler(this.radioButton10_CheckedChanged);
-            // 
-            // RbConsumoBebidaSocial
-            // 
-            this.RbConsumoBebidaSocial.AutoSize = true;
-            this.RbConsumoBebidaSocial.Location = new System.Drawing.Point(548, 338);
-            this.RbConsumoBebidaSocial.Name = "RbConsumoBebidaSocial";
-            this.RbConsumoBebidaSocial.Size = new System.Drawing.Size(103, 20);
-            this.RbConsumoBebidaSocial.TabIndex = 33;
-            this.RbConsumoBebidaSocial.TabStop = true;
-            this.RbConsumoBebidaSocial.Text = "Socialmente";
-            this.RbConsumoBebidaSocial.UseVisualStyleBackColor = true;
-            // 
-            // RbConsumoBebidaNãoconsumo
-            // 
-            this.RbConsumoBebidaNãoconsumo.AutoSize = true;
-            this.RbConsumoBebidaNãoconsumo.Location = new System.Drawing.Point(412, 338);
-            this.RbConsumoBebidaNãoconsumo.Name = "RbConsumoBebidaNãoconsumo";
-            this.RbConsumoBebidaNãoconsumo.Size = new System.Drawing.Size(112, 20);
-            this.RbConsumoBebidaNãoconsumo.TabIndex = 32;
-            this.RbConsumoBebidaNãoconsumo.TabStop = true;
-            this.RbConsumoBebidaNãoconsumo.Text = "Não consumo";
-            this.RbConsumoBebidaNãoconsumo.UseVisualStyleBackColor = true;
-            // 
-            // RbSedentario
-            // 
-            this.RbSedentario.AutoSize = true;
-            this.RbSedentario.Location = new System.Drawing.Point(350, 232);
-            this.RbSedentario.Name = "RbSedentario";
-            this.RbSedentario.Size = new System.Drawing.Size(219, 20);
-            this.RbSedentario.TabIndex = 31;
-            this.RbSedentario.TabStop = true;
-            this.RbSedentario.Text = "Sedentário (nenhuma atividade)";
-            this.RbSedentario.UseVisualStyleBackColor = true;
+            this.groupBoxMedicamentos.Controls.Add(this.RbMedicamentosNão);
+            this.groupBoxMedicamentos.Controls.Add(this.RbMedicamentosSim);
+            this.groupBoxMedicamentos.Controls.Add(this.textBoxMedicamentos);
+            this.groupBoxMedicamentos.Location = new System.Drawing.Point(507, 147);
+            this.groupBoxMedicamentos.Name = "groupBoxMedicamentos";
+            this.groupBoxMedicamentos.Size = new System.Drawing.Size(404, 47);
+            this.groupBoxMedicamentos.TabIndex = 51;
+            this.groupBoxMedicamentos.TabStop = false;
             // 
             // RbMedicamentosNão
             // 
             this.RbMedicamentosNão.AutoSize = true;
-            this.RbMedicamentosNão.Location = new System.Drawing.Point(517, 160);
+            this.RbMedicamentosNão.Location = new System.Drawing.Point(6, 14);
             this.RbMedicamentosNão.Name = "RbMedicamentosNão";
             this.RbMedicamentosNão.Size = new System.Drawing.Size(54, 20);
             this.RbMedicamentosNão.TabIndex = 30;
@@ -457,21 +335,10 @@
             this.RbMedicamentosNão.Text = "Não";
             this.RbMedicamentosNão.UseVisualStyleBackColor = true;
             // 
-            // RbAtvidadeFisicaLeve
-            // 
-            this.RbAtvidadeFisicaLeve.AutoSize = true;
-            this.RbAtvidadeFisicaLeve.Location = new System.Drawing.Point(350, 273);
-            this.RbAtvidadeFisicaLeve.Name = "RbAtvidadeFisicaLeve";
-            this.RbAtvidadeFisicaLeve.Size = new System.Drawing.Size(221, 20);
-            this.RbAtvidadeFisicaLeve.TabIndex = 29;
-            this.RbAtvidadeFisicaLeve.TabStop = true;
-            this.RbAtvidadeFisicaLeve.Text = "Leve (caminhada, alongamento)";
-            this.RbAtvidadeFisicaLeve.UseVisualStyleBackColor = true;
-            // 
             // RbMedicamentosSim
             // 
             this.RbMedicamentosSim.AutoSize = true;
-            this.RbMedicamentosSim.Location = new System.Drawing.Point(614, 163);
+            this.RbMedicamentosSim.Location = new System.Drawing.Point(101, 14);
             this.RbMedicamentosSim.Name = "RbMedicamentosSim";
             this.RbMedicamentosSim.Size = new System.Drawing.Size(51, 20);
             this.RbMedicamentosSim.TabIndex = 28;
@@ -481,74 +348,22 @@
             // 
             // textBoxMedicamentos
             // 
-            this.textBoxMedicamentos.Location = new System.Drawing.Point(689, 162);
+            this.textBoxMedicamentos.Location = new System.Drawing.Point(203, 14);
             this.textBoxMedicamentos.Name = "textBoxMedicamentos";
             this.textBoxMedicamentos.Size = new System.Drawing.Size(100, 22);
             this.textBoxMedicamentos.TabIndex = 27;
+            this.textBoxMedicamentos.Text = "Qual(is)?";
             // 
-            // TxtDoencasCronicas
+            // groupBoxGenero
             // 
-            this.TxtDoencasCronicas.Location = new System.Drawing.Point(469, 409);
-            this.TxtDoencasCronicas.Name = "TxtDoencasCronicas";
-            this.TxtDoencasCronicas.Size = new System.Drawing.Size(100, 22);
-            this.TxtDoencasCronicas.TabIndex = 26;
-            // 
-            // TxtAlergia
-            // 
-            this.TxtAlergia.Location = new System.Drawing.Point(435, 481);
-            this.TxtAlergia.Name = "TxtAlergia";
-            this.TxtAlergia.Size = new System.Drawing.Size(100, 22);
-            this.TxtAlergia.TabIndex = 25;
-            // 
-            // TxtDoencasHereditarias
-            // 
-            this.TxtDoencasHereditarias.Location = new System.Drawing.Point(626, 542);
-            this.TxtDoencasHereditarias.Name = "TxtDoencasHereditarias";
-            this.TxtDoencasHereditarias.Size = new System.Drawing.Size(100, 22);
-            this.TxtDoencasHereditarias.TabIndex = 24;
-            // 
-            // TxtCirurgia
-            // 
-            this.TxtCirurgia.Location = new System.Drawing.Point(461, 694);
-            this.TxtCirurgia.Name = "TxtCirurgia";
-            this.TxtCirurgia.Size = new System.Drawing.Size(100, 22);
-            this.TxtCirurgia.TabIndex = 23;
-            // 
-            // TxtMotivoConsultaPac
-            // 
-            this.TxtMotivoConsultaPac.Location = new System.Drawing.Point(314, 765);
-            this.TxtMotivoConsultaPac.Name = "TxtMotivoConsultaPac";
-            this.TxtMotivoConsultaPac.Size = new System.Drawing.Size(100, 22);
-            this.TxtMotivoConsultaPac.TabIndex = 22;
-            // 
-            // TxtPesoPac
-            // 
-            this.TxtPesoPac.Location = new System.Drawing.Point(136, 102);
-            this.TxtPesoPac.Name = "TxtPesoPac";
-            this.TxtPesoPac.Size = new System.Drawing.Size(100, 22);
-            this.TxtPesoPac.TabIndex = 21;
-            // 
-            // RbGeneroNaoDeclarado
-            // 
-            this.RbGeneroNaoDeclarado.AutoSize = true;
-            this.RbGeneroNaoDeclarado.Location = new System.Drawing.Point(216, 5);
-            this.RbGeneroNaoDeclarado.Name = "RbGeneroNaoDeclarado";
-            this.RbGeneroNaoDeclarado.Size = new System.Drawing.Size(146, 20);
-            this.RbGeneroNaoDeclarado.TabIndex = 20;
-            this.RbGeneroNaoDeclarado.TabStop = true;
-            this.RbGeneroNaoDeclarado.Text = "Prefiro não declarar";
-            this.RbGeneroNaoDeclarado.UseVisualStyleBackColor = true;
-            // 
-            // RbGeneroMasc
-            // 
-            this.RbGeneroMasc.AutoSize = true;
-            this.RbGeneroMasc.Location = new System.Drawing.Point(103, 5);
-            this.RbGeneroMasc.Name = "RbGeneroMasc";
-            this.RbGeneroMasc.Size = new System.Drawing.Size(82, 20);
-            this.RbGeneroMasc.TabIndex = 19;
-            this.RbGeneroMasc.TabStop = true;
-            this.RbGeneroMasc.Text = "Maculino";
-            this.RbGeneroMasc.UseVisualStyleBackColor = true;
+            this.groupBoxGenero.Controls.Add(this.RbGeneroFem);
+            this.groupBoxGenero.Controls.Add(this.RbGeneroMasc);
+            this.groupBoxGenero.Controls.Add(this.RbGeneroNaoDeclarado);
+            this.groupBoxGenero.Location = new System.Drawing.Point(141, 37);
+            this.groupBoxGenero.Name = "groupBoxGenero";
+            this.groupBoxGenero.Size = new System.Drawing.Size(362, 31);
+            this.groupBoxGenero.TabIndex = 50;
+            this.groupBoxGenero.TabStop = false;
             // 
             // RbGeneroFem
             // 
@@ -561,6 +376,249 @@
             this.RbGeneroFem.Text = "Feminino";
             this.RbGeneroFem.UseVisualStyleBackColor = true;
             this.RbGeneroFem.CheckedChanged += new System.EventHandler(this.RbGeneroFem_CheckedChanged);
+            // 
+            // RbGeneroMasc
+            // 
+            this.RbGeneroMasc.AutoSize = true;
+            this.RbGeneroMasc.Location = new System.Drawing.Point(103, 5);
+            this.RbGeneroMasc.Name = "RbGeneroMasc";
+            this.RbGeneroMasc.Size = new System.Drawing.Size(82, 20);
+            this.RbGeneroMasc.TabIndex = 19;
+            this.RbGeneroMasc.TabStop = true;
+            this.RbGeneroMasc.Text = "Maculino";
+            this.RbGeneroMasc.UseVisualStyleBackColor = true;
+            // 
+            // RbGeneroNaoDeclarado
+            // 
+            this.RbGeneroNaoDeclarado.AutoSize = true;
+            this.RbGeneroNaoDeclarado.Location = new System.Drawing.Point(216, 5);
+            this.RbGeneroNaoDeclarado.Name = "RbGeneroNaoDeclarado";
+            this.RbGeneroNaoDeclarado.Size = new System.Drawing.Size(146, 20);
+            this.RbGeneroNaoDeclarado.TabIndex = 20;
+            this.RbGeneroNaoDeclarado.TabStop = true;
+            this.RbGeneroNaoDeclarado.Text = "Prefiro não declarar";
+            this.RbGeneroNaoDeclarado.UseVisualStyleBackColor = true;
+            // 
+            // BtnSetaNextAgendarPac
+            // 
+            this.BtnSetaNextAgendarPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSetaNextAgendarPac.Image = ((System.Drawing.Image)(resources.GetObject("BtnSetaNextAgendarPac.Image")));
+            this.BtnSetaNextAgendarPac.Location = new System.Drawing.Point(998, 850);
+            this.BtnSetaNextAgendarPac.Name = "BtnSetaNextAgendarPac";
+            this.BtnSetaNextAgendarPac.Size = new System.Drawing.Size(38, 35);
+            this.BtnSetaNextAgendarPac.TabIndex = 49;
+            this.BtnSetaNextAgendarPac.UseVisualStyleBackColor = true;
+            // 
+            // BtnNextAgendarPac
+            // 
+            this.BtnNextAgendarPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNextAgendarPac.Location = new System.Drawing.Point(892, 850);
+            this.BtnNextAgendarPac.Name = "BtnNextAgendarPac";
+            this.BtnNextAgendarPac.Size = new System.Drawing.Size(111, 35);
+            this.BtnNextAgendarPac.TabIndex = 48;
+            this.BtnNextAgendarPac.Text = "Próximo";
+            this.BtnNextAgendarPac.UseVisualStyleBackColor = true;
+            // 
+            // RbCirurgiaSim
+            // 
+            this.RbCirurgiaSim.AutoSize = true;
+            this.RbCirurgiaSim.Location = new System.Drawing.Point(117, 13);
+            this.RbCirurgiaSim.Name = "RbCirurgiaSim";
+            this.RbCirurgiaSim.Size = new System.Drawing.Size(51, 20);
+            this.RbCirurgiaSim.TabIndex = 45;
+            this.RbCirurgiaSim.TabStop = true;
+            this.RbCirurgiaSim.Text = "Sim";
+            this.RbCirurgiaSim.UseVisualStyleBackColor = true;
+            // 
+            // RbCirurgiaNao
+            // 
+            this.RbCirurgiaNao.AutoSize = true;
+            this.RbCirurgiaNao.Location = new System.Drawing.Point(5, 13);
+            this.RbCirurgiaNao.Name = "RbCirurgiaNao";
+            this.RbCirurgiaNao.Size = new System.Drawing.Size(54, 20);
+            this.RbCirurgiaNao.TabIndex = 44;
+            this.RbCirurgiaNao.TabStop = true;
+            this.RbCirurgiaNao.Text = "Não";
+            this.RbCirurgiaNao.UseVisualStyleBackColor = true;
+            // 
+            // RbNoSmoker
+            // 
+            this.RbNoSmoker.AutoSize = true;
+            this.RbNoSmoker.Location = new System.Drawing.Point(2, 9);
+            this.RbNoSmoker.Name = "RbNoSmoker";
+            this.RbNoSmoker.Size = new System.Drawing.Size(86, 20);
+            this.RbNoSmoker.TabIndex = 43;
+            this.RbNoSmoker.TabStop = true;
+            this.RbNoSmoker.Text = "Não fumo";
+            this.RbNoSmoker.UseVisualStyleBackColor = true;
+            // 
+            // RbOcasionalmente
+            // 
+            this.RbOcasionalmente.AutoSize = true;
+            this.RbOcasionalmente.Location = new System.Drawing.Point(151, 9);
+            this.RbOcasionalmente.Name = "RbOcasionalmente";
+            this.RbOcasionalmente.Size = new System.Drawing.Size(126, 20);
+            this.RbOcasionalmente.TabIndex = 42;
+            this.RbOcasionalmente.TabStop = true;
+            this.RbOcasionalmente.Text = "Ocasionalmente";
+            this.RbOcasionalmente.UseVisualStyleBackColor = true;
+            // 
+            // radioButton17
+            // 
+            this.radioButton17.AutoSize = true;
+            this.radioButton17.Location = new System.Drawing.Point(343, 9);
+            this.radioButton17.Name = "radioButton17";
+            this.radioButton17.Size = new System.Drawing.Size(101, 20);
+            this.radioButton17.TabIndex = 41;
+            this.radioButton17.TabStop = true;
+            this.radioButton17.Text = "Diariamente";
+            this.radioButton17.UseVisualStyleBackColor = true;
+            // 
+            // RbDoencasHereditariasNao
+            // 
+            this.RbDoencasHereditariasNao.AutoSize = true;
+            this.RbDoencasHereditariasNao.Location = new System.Drawing.Point(1, 10);
+            this.RbDoencasHereditariasNao.Name = "RbDoencasHereditariasNao";
+            this.RbDoencasHereditariasNao.Size = new System.Drawing.Size(54, 20);
+            this.RbDoencasHereditariasNao.TabIndex = 40;
+            this.RbDoencasHereditariasNao.TabStop = true;
+            this.RbDoencasHereditariasNao.Text = "Não";
+            this.RbDoencasHereditariasNao.UseVisualStyleBackColor = true;
+            // 
+            // RbDoencasHereditariasSim
+            // 
+            this.RbDoencasHereditariasSim.AutoSize = true;
+            this.RbDoencasHereditariasSim.Location = new System.Drawing.Point(121, 9);
+            this.RbDoencasHereditariasSim.Name = "RbDoencasHereditariasSim";
+            this.RbDoencasHereditariasSim.Size = new System.Drawing.Size(51, 20);
+            this.RbDoencasHereditariasSim.TabIndex = 39;
+            this.RbDoencasHereditariasSim.TabStop = true;
+            this.RbDoencasHereditariasSim.Text = "Sim";
+            this.RbDoencasHereditariasSim.UseVisualStyleBackColor = true;
+            // 
+            // RbAlergiaNao
+            // 
+            this.RbAlergiaNao.AutoSize = true;
+            this.RbAlergiaNao.Location = new System.Drawing.Point(0, 10);
+            this.RbAlergiaNao.Name = "RbAlergiaNao";
+            this.RbAlergiaNao.Size = new System.Drawing.Size(54, 20);
+            this.RbAlergiaNao.TabIndex = 38;
+            this.RbAlergiaNao.TabStop = true;
+            this.RbAlergiaNao.Text = "Não";
+            this.RbAlergiaNao.UseVisualStyleBackColor = true;
+            // 
+            // RbAlergiaSim
+            // 
+            this.RbAlergiaSim.AutoSize = true;
+            this.RbAlergiaSim.Location = new System.Drawing.Point(102, 10);
+            this.RbAlergiaSim.Name = "RbAlergiaSim";
+            this.RbAlergiaSim.Size = new System.Drawing.Size(51, 20);
+            this.RbAlergiaSim.TabIndex = 37;
+            this.RbAlergiaSim.TabStop = true;
+            this.RbAlergiaSim.Text = "Sim";
+            this.RbAlergiaSim.UseVisualStyleBackColor = true;
+            // 
+            // RbDoencasCronicasNao
+            // 
+            this.RbDoencasCronicasNao.AutoSize = true;
+            this.RbDoencasCronicasNao.Location = new System.Drawing.Point(6, 8);
+            this.RbDoencasCronicasNao.Name = "RbDoencasCronicasNao";
+            this.RbDoencasCronicasNao.Size = new System.Drawing.Size(54, 20);
+            this.RbDoencasCronicasNao.TabIndex = 36;
+            this.RbDoencasCronicasNao.TabStop = true;
+            this.RbDoencasCronicasNao.Text = "Não";
+            this.RbDoencasCronicasNao.UseVisualStyleBackColor = true;
+            // 
+            // RbDoencasCronicasSim
+            // 
+            this.RbDoencasCronicasSim.AutoSize = true;
+            this.RbDoencasCronicasSim.Location = new System.Drawing.Point(121, 8);
+            this.RbDoencasCronicasSim.Name = "RbDoencasCronicasSim";
+            this.RbDoencasCronicasSim.Size = new System.Drawing.Size(51, 20);
+            this.RbDoencasCronicasSim.TabIndex = 35;
+            this.RbDoencasCronicasSim.TabStop = true;
+            this.RbDoencasCronicasSim.Text = "Sim";
+            this.RbDoencasCronicasSim.UseVisualStyleBackColor = true;
+            // 
+            // RbConsumoBebidaFrequentemente
+            // 
+            this.RbConsumoBebidaFrequentemente.AutoSize = true;
+            this.RbConsumoBebidaFrequentemente.Location = new System.Drawing.Point(268, 11);
+            this.RbConsumoBebidaFrequentemente.Name = "RbConsumoBebidaFrequentemente";
+            this.RbConsumoBebidaFrequentemente.Size = new System.Drawing.Size(126, 20);
+            this.RbConsumoBebidaFrequentemente.TabIndex = 34;
+            this.RbConsumoBebidaFrequentemente.TabStop = true;
+            this.RbConsumoBebidaFrequentemente.Text = "Frequentemente";
+            this.RbConsumoBebidaFrequentemente.UseVisualStyleBackColor = true;
+            this.RbConsumoBebidaFrequentemente.CheckedChanged += new System.EventHandler(this.radioButton10_CheckedChanged);
+            // 
+            // RbConsumoBebidaSocial
+            // 
+            this.RbConsumoBebidaSocial.AutoSize = true;
+            this.RbConsumoBebidaSocial.Location = new System.Drawing.Point(134, 11);
+            this.RbConsumoBebidaSocial.Name = "RbConsumoBebidaSocial";
+            this.RbConsumoBebidaSocial.Size = new System.Drawing.Size(103, 20);
+            this.RbConsumoBebidaSocial.TabIndex = 33;
+            this.RbConsumoBebidaSocial.TabStop = true;
+            this.RbConsumoBebidaSocial.Text = "Socialmente";
+            this.RbConsumoBebidaSocial.UseVisualStyleBackColor = true;
+            // 
+            // RbConsumoBebidaNãoconsumo
+            // 
+            this.RbConsumoBebidaNãoconsumo.AutoSize = true;
+            this.RbConsumoBebidaNãoconsumo.Location = new System.Drawing.Point(0, 9);
+            this.RbConsumoBebidaNãoconsumo.Name = "RbConsumoBebidaNãoconsumo";
+            this.RbConsumoBebidaNãoconsumo.Size = new System.Drawing.Size(112, 20);
+            this.RbConsumoBebidaNãoconsumo.TabIndex = 32;
+            this.RbConsumoBebidaNãoconsumo.TabStop = true;
+            this.RbConsumoBebidaNãoconsumo.Text = "Não consumo";
+            this.RbConsumoBebidaNãoconsumo.UseVisualStyleBackColor = true;
+            // 
+            // TxtDoencasCronicas
+            // 
+            this.TxtDoencasCronicas.Location = new System.Drawing.Point(212, 7);
+            this.TxtDoencasCronicas.Name = "TxtDoencasCronicas";
+            this.TxtDoencasCronicas.Size = new System.Drawing.Size(100, 22);
+            this.TxtDoencasCronicas.TabIndex = 26;
+            this.TxtDoencasCronicas.Text = "Qual(is)?";
+            // 
+            // TxtAlergia
+            // 
+            this.TxtAlergia.Location = new System.Drawing.Point(218, 8);
+            this.TxtAlergia.Name = "TxtAlergia";
+            this.TxtAlergia.Size = new System.Drawing.Size(100, 22);
+            this.TxtAlergia.TabIndex = 25;
+            this.TxtAlergia.Text = "Qual(is)?";
+            // 
+            // TxtDoencasHereditarias
+            // 
+            this.TxtDoencasHereditarias.Location = new System.Drawing.Point(240, 9);
+            this.TxtDoencasHereditarias.Name = "TxtDoencasHereditarias";
+            this.TxtDoencasHereditarias.Size = new System.Drawing.Size(100, 22);
+            this.TxtDoencasHereditarias.TabIndex = 24;
+            this.TxtDoencasHereditarias.Text = "Qual(is)?";
+            // 
+            // TxtCirurgia
+            // 
+            this.TxtCirurgia.Location = new System.Drawing.Point(247, 11);
+            this.TxtCirurgia.Name = "TxtCirurgia";
+            this.TxtCirurgia.Size = new System.Drawing.Size(100, 22);
+            this.TxtCirurgia.TabIndex = 23;
+            this.TxtCirurgia.Text = "Qual(is)?";
+            // 
+            // TxtMotivoConsultaPac
+            // 
+            this.TxtMotivoConsultaPac.Location = new System.Drawing.Point(314, 765);
+            this.TxtMotivoConsultaPac.Name = "TxtMotivoConsultaPac";
+            this.TxtMotivoConsultaPac.Size = new System.Drawing.Size(100, 22);
+            this.TxtMotivoConsultaPac.TabIndex = 22;
+            // 
+            // TxtPesoPac
+            // 
+            this.TxtPesoPac.Location = new System.Drawing.Point(109, 102);
+            this.TxtPesoPac.Name = "TxtPesoPac";
+            this.TxtPesoPac.Size = new System.Drawing.Size(100, 22);
+            this.TxtPesoPac.TabIndex = 21;
             // 
             // LblMotivoConsultaPac
             // 
@@ -591,36 +649,71 @@
             this.LblCirurgia.Text = "Já fez alguma cirurgia?";
             this.LblCirurgia.Click += new System.EventHandler(this.label12_Click);
             // 
-            // BtnNextAgendarPac
+            // groupBoxAlergia
             // 
-            this.BtnNextAgendarPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNextAgendarPac.Location = new System.Drawing.Point(892, 850);
-            this.BtnNextAgendarPac.Name = "BtnNextAgendarPac";
-            this.BtnNextAgendarPac.Size = new System.Drawing.Size(111, 35);
-            this.BtnNextAgendarPac.TabIndex = 48;
-            this.BtnNextAgendarPac.Text = "Próximo";
-            this.BtnNextAgendarPac.UseVisualStyleBackColor = true;
+            this.groupBoxAlergia.Controls.Add(this.TxtAlergia);
+            this.groupBoxAlergia.Controls.Add(this.RbAlergiaNao);
+            this.groupBoxAlergia.Controls.Add(this.RbAlergiaSim);
+            this.groupBoxAlergia.Location = new System.Drawing.Point(214, 468);
+            this.groupBoxAlergia.Name = "groupBoxAlergia";
+            this.groupBoxAlergia.Size = new System.Drawing.Size(330, 36);
+            this.groupBoxAlergia.TabIndex = 53;
+            this.groupBoxAlergia.TabStop = false;
             // 
-            // BtnSetaNextAgendarPac
+            // groupBoxDoencasCronicas
             // 
-            this.BtnSetaNextAgendarPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSetaNextAgendarPac.Image = ((System.Drawing.Image)(resources.GetObject("BtnSetaNextAgendarPac.Image")));
-            this.BtnSetaNextAgendarPac.Location = new System.Drawing.Point(998, 850);
-            this.BtnSetaNextAgendarPac.Name = "BtnSetaNextAgendarPac";
-            this.BtnSetaNextAgendarPac.Size = new System.Drawing.Size(38, 35);
-            this.BtnSetaNextAgendarPac.TabIndex = 49;
-            this.BtnSetaNextAgendarPac.UseVisualStyleBackColor = true;
+            this.groupBoxDoencasCronicas.Controls.Add(this.RbDoencasCronicasNao);
+            this.groupBoxDoencasCronicas.Controls.Add(this.RbDoencasCronicasSim);
+            this.groupBoxDoencasCronicas.Controls.Add(this.TxtDoencasCronicas);
+            this.groupBoxDoencasCronicas.Location = new System.Drawing.Point(310, 400);
+            this.groupBoxDoencasCronicas.Name = "groupBoxDoencasCronicas";
+            this.groupBoxDoencasCronicas.Size = new System.Drawing.Size(349, 31);
+            this.groupBoxDoencasCronicas.TabIndex = 54;
+            this.groupBoxDoencasCronicas.TabStop = false;
             // 
-            // groupBoxGenero
+            // groupBoxConsumoBebidas
             // 
-            this.groupBoxGenero.Controls.Add(this.RbGeneroFem);
-            this.groupBoxGenero.Controls.Add(this.RbGeneroMasc);
-            this.groupBoxGenero.Controls.Add(this.RbGeneroNaoDeclarado);
-            this.groupBoxGenero.Location = new System.Drawing.Point(141, 37);
-            this.groupBoxGenero.Name = "groupBoxGenero";
-            this.groupBoxGenero.Size = new System.Drawing.Size(362, 31);
-            this.groupBoxGenero.TabIndex = 50;
-            this.groupBoxGenero.TabStop = false;
+            this.groupBoxConsumoBebidas.Controls.Add(this.RbConsumoBebidaNãoconsumo);
+            this.groupBoxConsumoBebidas.Controls.Add(this.RbConsumoBebidaSocial);
+            this.groupBoxConsumoBebidas.Controls.Add(this.RbConsumoBebidaFrequentemente);
+            this.groupBoxConsumoBebidas.Location = new System.Drawing.Point(395, 325);
+            this.groupBoxConsumoBebidas.Name = "groupBoxConsumoBebidas";
+            this.groupBoxConsumoBebidas.Size = new System.Drawing.Size(411, 40);
+            this.groupBoxConsumoBebidas.TabIndex = 54;
+            this.groupBoxConsumoBebidas.TabStop = false;
+            // 
+            // groupBoxDoencasHereditarias
+            // 
+            this.groupBoxDoencasHereditarias.Controls.Add(this.RbDoencasHereditariasNao);
+            this.groupBoxDoencasHereditarias.Controls.Add(this.RbDoencasHereditariasSim);
+            this.groupBoxDoencasHereditarias.Controls.Add(this.TxtDoencasHereditarias);
+            this.groupBoxDoencasHereditarias.Location = new System.Drawing.Point(442, 534);
+            this.groupBoxDoencasHereditarias.Name = "groupBoxDoencasHereditarias";
+            this.groupBoxDoencasHereditarias.Size = new System.Drawing.Size(377, 36);
+            this.groupBoxDoencasHereditarias.TabIndex = 55;
+            this.groupBoxDoencasHereditarias.TabStop = false;
+            // 
+            // groupBoxSmoker
+            // 
+            this.groupBoxSmoker.Controls.Add(this.RbNoSmoker);
+            this.groupBoxSmoker.Controls.Add(this.RbOcasionalmente);
+            this.groupBoxSmoker.Controls.Add(this.radioButton17);
+            this.groupBoxSmoker.Location = new System.Drawing.Point(193, 607);
+            this.groupBoxSmoker.Name = "groupBoxSmoker";
+            this.groupBoxSmoker.Size = new System.Drawing.Size(450, 37);
+            this.groupBoxSmoker.TabIndex = 54;
+            this.groupBoxSmoker.TabStop = false;
+            // 
+            // groupBoxCirurgia
+            // 
+            this.groupBoxCirurgia.Controls.Add(this.RbCirurgiaNao);
+            this.groupBoxCirurgia.Controls.Add(this.RbCirurgiaSim);
+            this.groupBoxCirurgia.Controls.Add(this.TxtCirurgia);
+            this.groupBoxCirurgia.Location = new System.Drawing.Point(316, 684);
+            this.groupBoxCirurgia.Name = "groupBoxCirurgia";
+            this.groupBoxCirurgia.Size = new System.Drawing.Size(361, 37);
+            this.groupBoxCirurgia.TabIndex = 54;
+            this.groupBoxCirurgia.TabStop = false;
             // 
             // FormularioTriagem
             // 
@@ -638,8 +731,24 @@
             this.Load += new System.EventHandler(this.FormularioTriagem_Load);
             this.panelConteudo.ResumeLayout(false);
             this.panelConteudo.PerformLayout();
+            this.groupBoxAtvFisica.ResumeLayout(false);
+            this.groupBoxAtvFisica.PerformLayout();
+            this.groupBoxMedicamentos.ResumeLayout(false);
+            this.groupBoxMedicamentos.PerformLayout();
             this.groupBoxGenero.ResumeLayout(false);
             this.groupBoxGenero.PerformLayout();
+            this.groupBoxAlergia.ResumeLayout(false);
+            this.groupBoxAlergia.PerformLayout();
+            this.groupBoxDoencasCronicas.ResumeLayout(false);
+            this.groupBoxDoencasCronicas.PerformLayout();
+            this.groupBoxConsumoBebidas.ResumeLayout(false);
+            this.groupBoxConsumoBebidas.PerformLayout();
+            this.groupBoxDoencasHereditarias.ResumeLayout(false);
+            this.groupBoxDoencasHereditarias.PerformLayout();
+            this.groupBoxSmoker.ResumeLayout(false);
+            this.groupBoxSmoker.PerformLayout();
+            this.groupBoxCirurgia.ResumeLayout(false);
+            this.groupBoxCirurgia.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -695,5 +804,13 @@
         private System.Windows.Forms.Button BtnNextAgendarPac;
         private System.Windows.Forms.Button BtnSetaNextAgendarPac;
         private System.Windows.Forms.GroupBox groupBoxGenero;
+        private System.Windows.Forms.GroupBox groupBoxAtvFisica;
+        private System.Windows.Forms.GroupBox groupBoxMedicamentos;
+        private System.Windows.Forms.GroupBox groupBoxDoencasCronicas;
+        private System.Windows.Forms.GroupBox groupBoxConsumoBebidas;
+        private System.Windows.Forms.GroupBox groupBoxAlergia;
+        private System.Windows.Forms.GroupBox groupBoxSmoker;
+        private System.Windows.Forms.GroupBox groupBoxCirurgia;
+        private System.Windows.Forms.GroupBox groupBoxDoencasHereditarias;
     }
 }

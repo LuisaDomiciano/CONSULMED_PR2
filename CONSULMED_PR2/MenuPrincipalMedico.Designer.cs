@@ -28,25 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalMedico));
             this.pictureBoxMenuMedico = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.BtnAgendaMenuMed = new System.Windows.Forms.Button();
             this.BtnHistoricoMed = new System.Windows.Forms.Button();
-            this.aaaaaa = new System.Windows.Forms.Button();
+            this.BtnMinhasConsultasMed = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuMedico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxMenuMedico
             // 
-            this.pictureBoxMenuMedico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxMenuMedico.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenuMedico.Image")));
             this.pictureBoxMenuMedico.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxMenuMedico.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxMenuMedico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxMenuMedico.Name = "pictureBoxMenuMedico";
-            this.pictureBoxMenuMedico.Size = new System.Drawing.Size(800, 450);
+            this.pictureBoxMenuMedico.Size = new System.Drawing.Size(1067, 554);
             this.pictureBoxMenuMedico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMenuMedico.TabIndex = 1;
             this.pictureBoxMenuMedico.TabStop = false;
@@ -54,18 +52,20 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(575, 224);
+            this.pictureBox1.Location = new System.Drawing.Point(767, 276);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(8, 8);
+            this.pictureBox1.Size = new System.Drawing.Size(11, 10);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // BtnAgendaMenuMed
             // 
-            this.BtnAgendaMenuMed.Location = new System.Drawing.Point(373, 173);
-            this.BtnAgendaMenuMed.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAgendaMenuMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgendaMenuMed.Location = new System.Drawing.Point(444, 203);
+            this.BtnAgendaMenuMed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAgendaMenuMed.Name = "BtnAgendaMenuMed";
-            this.BtnAgendaMenuMed.Size = new System.Drawing.Size(56, 19);
+            this.BtnAgendaMenuMed.Size = new System.Drawing.Size(173, 70);
             this.BtnAgendaMenuMed.TabIndex = 2;
             this.BtnAgendaMenuMed.Text = "Agenda";
             this.BtnAgendaMenuMed.UseVisualStyleBackColor = true;
@@ -73,39 +73,55 @@
             // 
             // BtnHistoricoMed
             // 
-            this.BtnHistoricoMed.Location = new System.Drawing.Point(373, 224);
-            this.BtnHistoricoMed.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnHistoricoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHistoricoMed.Location = new System.Drawing.Point(444, 310);
+            this.BtnHistoricoMed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnHistoricoMed.Name = "BtnHistoricoMed";
-            this.BtnHistoricoMed.Size = new System.Drawing.Size(56, 19);
+            this.BtnHistoricoMed.Size = new System.Drawing.Size(173, 70);
             this.BtnHistoricoMed.TabIndex = 3;
             this.BtnHistoricoMed.Text = "Histórico";
             this.BtnHistoricoMed.UseVisualStyleBackColor = true;
             this.BtnHistoricoMed.Click += new System.EventHandler(this.BtnHistoricoMed_Click_1);
             // 
-            // aaaaaa
+            // BtnMinhasConsultasMed
             // 
-            this.aaaaaa.Location = new System.Drawing.Point(411, 331);
-            this.aaaaaa.Name = "aaaaaa";
-            this.aaaaaa.Size = new System.Drawing.Size(75, 23);
-            this.aaaaaa.TabIndex = 4;
-            this.aaaaaa.Text = "button1";
-            this.aaaaaa.UseVisualStyleBackColor = true;
-            this.aaaaaa.Click += new System.EventHandler(this.aaaaaa_Click);
+            this.BtnMinhasConsultasMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMinhasConsultasMed.Location = new System.Drawing.Point(444, 414);
+            this.BtnMinhasConsultasMed.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMinhasConsultasMed.Name = "BtnMinhasConsultasMed";
+            this.BtnMinhasConsultasMed.Size = new System.Drawing.Size(173, 70);
+            this.BtnMinhasConsultasMed.TabIndex = 5;
+            this.BtnMinhasConsultasMed.Text = "Minhas Consultas";
+            this.BtnMinhasConsultasMed.UseVisualStyleBackColor = true;
+            this.BtnMinhasConsultasMed.Click += new System.EventHandler(this.BtnMinhasConsultasMed_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(277, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(562, 91);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Menu Principal";
             // 
             // MenuPrincipalMedico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.aaaaaa);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnMinhasConsultasMed);
             this.Controls.Add(this.BtnHistoricoMed);
             this.Controls.Add(this.BtnAgendaMenuMed);
             this.Controls.Add(this.pictureBoxMenuMedico);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipalMedico";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuMedico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -116,6 +132,7 @@
         private System.ServiceProcess.ServiceController serviceController1;
         private System.Windows.Forms.Button BtnAgendaMenuMed;
         private System.Windows.Forms.Button BtnHistoricoMed;
-        private System.Windows.Forms.Button aaaaaa;
+        private System.Windows.Forms.Button BtnMinhasConsultasMed;
+        private System.Windows.Forms.Label label1;
     }
 }

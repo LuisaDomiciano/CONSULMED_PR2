@@ -41,12 +41,9 @@ namespace CONSULMED_PR2
             historicoMedico.Show();
             this.Hide();
         }
-
-        private void aaaaaa_Click(object sender, EventArgs e)
+        private void BtnMinhasConsultasMed_Click(object sender, EventArgs e)
         {
-            FormularioTriagem formularioTriagem = new FormularioTriagem();
-            formularioTriagem.Show();
-            this.Hide();
+
         }
     }
 }

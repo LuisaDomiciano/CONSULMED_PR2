@@ -121,7 +121,7 @@
   <data name="PictureBoxHistoryMed.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABkAAAAOACAYAAABi3L+0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7s/XewLVl2n4nlMfdVAwwORyJFxcjGcCiNIkYz0IjSaDgiARAgfDdM
+        wAAADsABataJCQAA/7JJREFUeF7s/XewLVl2n4nlMfdVAwwORyJFxcjGcCiNIkYz0IjSaDgiARAgfDdM
         d1fVe+967733/rky7dC+y3vTZdt3Aw3HYVAhckIacki276pqA4AuRJAE0N21FN/ae+fJszJv3pfvnnfr
         1qv844t777l5dmbu3Ol+v73WiqL+HjkRA30NBns93Y6BLonGByUaG5BoqF+i4SGpLM5JdHlToitbUtla
         kejuXYnW56Uy2C9RxwWJui+479F2d6dfh19XT5dUut3/KmODEs2OSrS+JNHKrEQTw+5/PV0SjfTr+qqd
@@ -7420,4 +7420,7 @@
         usVv7zbj6TYZ2/wozm6GNobHL47/H1ZEzhUfb/VHAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

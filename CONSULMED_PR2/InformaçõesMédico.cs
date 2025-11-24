@@ -87,8 +87,8 @@ namespace CONSULMED_PR2
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Abrir Menu Principal
-                MenuPrincipalMedico menuPrincipal = new MenuPrincipalMedico();
-                menuPrincipal.Show();
+                MenuPrincipalMedico menuPrincipalMed = new MenuPrincipalMedico();
+                menuPrincipalMed.Show();
                 this.Hide(); // Fecha o formulário atual
 
             }
