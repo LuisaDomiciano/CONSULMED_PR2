@@ -191,6 +191,7 @@
             this.txtInstituicaoFormacao.Name = "txtInstituicaoFormacao";
             this.txtInstituicaoFormacao.Size = new System.Drawing.Size(100, 20);
             this.txtInstituicaoFormacao.TabIndex = 15;
+            this.txtInstituicaoFormacao.TextChanged += new System.EventHandler(this.txtInstituicaoFormacao_TextChanged);
             // 
             // txtNumeroROE
             // 

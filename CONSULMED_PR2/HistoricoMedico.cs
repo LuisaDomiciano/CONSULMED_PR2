@@ -16,5 +16,10 @@ namespace CONSULMED_PR2
         {
             InitializeComponent();
         }
+
+        private void BtnGerarAtestado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

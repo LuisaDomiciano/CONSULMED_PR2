@@ -58,7 +58,7 @@ namespace CONSULMED_PR2
 
                     string query = @"INSERT INTO Medico_Profissional
                            (Especialidade_Principal, Subespecialidade, Numero_RQE, 
-                           Instituicao_Formacao, Ano_Formatura,  Tempo_Experiencia, 
+                            Instituacao_Formacao, Ano_Formatura,  Tempo_Experiencia, 
                             Horario_Atendimento, Valor_Consulta) 
                            VALUES (@Especialidade, @Subespecialidade, @ROE, 
                                    @Instituicao, @AnoFormatura, @Experiencia, 
@@ -100,6 +100,10 @@ namespace CONSULMED_PR2
             }
         }
 
+        private void txtInstituicaoFormacao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

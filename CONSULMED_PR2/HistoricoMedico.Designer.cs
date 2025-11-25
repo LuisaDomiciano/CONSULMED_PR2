@@ -43,9 +43,9 @@
             this.PictureBoxHistoryMed.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PictureBoxHistoryMed.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxHistoryMed.Image")));
             this.PictureBoxHistoryMed.Location = new System.Drawing.Point(0, 0);
-            this.PictureBoxHistoryMed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PictureBoxHistoryMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PictureBoxHistoryMed.Name = "PictureBoxHistoryMed";
-            this.PictureBoxHistoryMed.Size = new System.Drawing.Size(1067, 554);
+            this.PictureBoxHistoryMed.Size = new System.Drawing.Size(800, 450);
             this.PictureBoxHistoryMed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxHistoryMed.TabIndex = 1;
             this.PictureBoxHistoryMed.TabStop = false;
@@ -53,22 +53,25 @@
             // dataGridViewHistoricoMedico
             // 
             this.dataGridViewHistoricoMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHistoricoMedico.Location = new System.Drawing.Point(431, 205);
+            this.dataGridViewHistoricoMedico.Location = new System.Drawing.Point(323, 167);
+            this.dataGridViewHistoricoMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewHistoricoMedico.Name = "dataGridViewHistoricoMedico";
             this.dataGridViewHistoricoMedico.RowHeadersWidth = 51;
             this.dataGridViewHistoricoMedico.RowTemplate.Height = 24;
-            this.dataGridViewHistoricoMedico.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewHistoricoMedico.Size = new System.Drawing.Size(180, 122);
             this.dataGridViewHistoricoMedico.TabIndex = 2;
             // 
             // BtnGerarAtestado
             // 
             this.BtnGerarAtestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGerarAtestado.Location = new System.Drawing.Point(827, 368);
+            this.BtnGerarAtestado.Location = new System.Drawing.Point(620, 299);
+            this.BtnGerarAtestado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnGerarAtestado.Name = "BtnGerarAtestado";
-            this.BtnGerarAtestado.Size = new System.Drawing.Size(162, 49);
+            this.BtnGerarAtestado.Size = new System.Drawing.Size(122, 40);
             this.BtnGerarAtestado.TabIndex = 3;
             this.BtnGerarAtestado.Text = "Gerar Atestado";
             this.BtnGerarAtestado.UseVisualStyleBackColor = true;
+            this.BtnGerarAtestado.Click += new System.EventHandler(this.BtnGerarAtestado_Click);
             // 
             // openFileDialog1
             // 
@@ -77,23 +80,23 @@
             // BtnEnviarHistorico
             // 
             this.BtnEnviarHistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEnviarHistorico.Location = new System.Drawing.Point(827, 274);
+            this.BtnEnviarHistorico.Location = new System.Drawing.Point(634, 220);
+            this.BtnEnviarHistorico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnEnviarHistorico.Name = "BtnEnviarHistorico";
-            this.BtnEnviarHistorico.Size = new System.Drawing.Size(162, 68);
+            this.BtnEnviarHistorico.Size = new System.Drawing.Size(122, 55);
             this.BtnEnviarHistorico.TabIndex = 4;
             this.BtnEnviarHistorico.Text = "Enviar ao Paciente";
             this.BtnEnviarHistorico.UseVisualStyleBackColor = true;
             // 
             // HistoricoMedico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnEnviarHistorico);
             this.Controls.Add(this.BtnGerarAtestado);
             this.Controls.Add(this.dataGridViewHistoricoMedico);
             this.Controls.Add(this.PictureBoxHistoryMed);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HistoricoMedico";
             this.Text = "HistoricoMedico";
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxHistoryMed)).EndInit();

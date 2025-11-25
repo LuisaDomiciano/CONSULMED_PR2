@@ -39,69 +39,69 @@ namespace CONSULMED_PR2
             string novaSenha = TxtNovaSenha.Text.Trim();
             string confirmarSenha = TxtConfirmeNovaSenha.Text.Trim();
 
-            // Verifica se os campos foram preenchidos
-            if (string.IsNullOrEmpty(codigoDigitado) || string.IsNullOrEmpty(novaSenha) || string.IsNullOrEmpty(confirmarSenha))
+            if (string.IsNullOrEmpty(codigoDigitado) ||
+                string.IsNullOrEmpty(novaSenha) ||
+                string.IsNullOrEmpty(confirmarSenha))
             {
-                MessageBox.Show("Preencha todos os campos antes de continuar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Preencha todos os campos.", "Atenção");
                 return;
             }
 
-            // Verifica se o código está correto
+            // Verifica código
             if (codigoDigitado != RecoveryStorage.CodigoRecuperacao)
             {
-                MessageBox.Show("O código de recuperação está incorreto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Código incorreto.", "Erro");
                 return;
             }
 
-            // Verifica se as senhas coincidem
+            // Verifica senhas
             if (novaSenha != confirmarSenha)
             {
-                MessageBox.Show("As senhas não coincidem.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("As senhas não coincidem.", "Erro");
                 return;
             }
 
-            // Atualiza a senha no banco de dados
             string emailUsuario = RecoveryStorage.EmailRecuperacao;
             string connectionString = @"Data Source=sqlexpress;Initial Catalog=CJ3027392PR2;User ID=aluno;Password=aluno;";
-            string query = "UPDATE PaginaLog SET Senha_PagLog = @NovaSenha WHERE Nome_PagLog = @Email OR Email = @Email";
+
+            string query = "UPDATE PaginaLog SET Senha_PagLog = @NovaSenha WHERE Email = @Email";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@NovaSenha", novaSenha);
                         cmd.Parameters.AddWithValue("@Email", emailUsuario);
-                        int linhasAfetadas = cmd.ExecuteNonQuery();
 
-                        if (linhasAfetadas > 0)
+                        int linhas = cmd.ExecuteNonQuery();
+
+                        if (linhas > 0)
                         {
-                            MessageBox.Show("Senha redefinida com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Senha redefinida com sucesso!", "Sucesso");
 
-                            // Limpa dados temporários
-                            RecoveryStorage.EmailRecuperacao = string.Empty;
-                            RecoveryStorage.CodigoRecuperacao = string.Empty;
+                            RecoveryStorage.EmailRecuperacao = "";
+                            RecoveryStorage.CodigoRecuperacao = "";
 
-                            // Volta para a tela de login
                             this.Hide();
-                            TxtLoginLog login = new TxtLoginLog();
-                            login.Show();
+                            new TxtLoginLog().Show();
                         }
                         else
                         {
-                            MessageBox.Show("Não foi possível atualizar a senha. Verifique o e-mail cadastrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Email não encontrado.", "Erro");
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao redefinir a senha: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro: " + ex.Message);
             }
+        
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

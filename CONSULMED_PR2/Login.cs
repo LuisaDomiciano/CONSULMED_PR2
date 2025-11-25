@@ -150,6 +150,7 @@ namespace CONSULMED_PR2
         private void LinkLblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             {
+
                 // Fecha o form atual
                 this.Hide();
 
@@ -197,13 +198,13 @@ namespace CONSULMED_PR2
                 MailMessage mail = new MailMessage();
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("testepr2sos@gmail.com");
+                mail.From = new MailAddress("consultasmedicasconsulmed@gmail.com");
                 mail.To.Add(emailDestino);
                 mail.Subject = "Código de Recuperação de Senha - CONSULMED";
                 mail.Body = $"Olá!\n\nSeu código de recuperação é: {codigo}\n\nAtenciosamente,\nEquipe CONSULMED";
 
                 smtp.Port = 587;
-                smtp.Credentials = new NetworkCredential("testepr2sos@gmail.com", "aleu stdb yode dtqc");
+                smtp.Credentials = new NetworkCredential("consultasmedicasconsulmed@gmail.com", "recu zsht nnhb shid");
                 smtp.EnableSsl = true;
 
                 smtp.Send(mail);
