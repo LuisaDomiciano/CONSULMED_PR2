@@ -123,6 +123,26 @@ namespace CONSULMED_PR2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_voltar_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-voltar-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imageee {
             get {
                 object obj = ResourceManager.GetObject("imageee", resourceCulture);
