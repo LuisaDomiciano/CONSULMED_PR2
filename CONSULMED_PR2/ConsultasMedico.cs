@@ -16,5 +16,14 @@ namespace CONSULMED_PR2
         {
             InitializeComponent();
         }
+
+        private void BtnVoltarMed_Click(object sender, EventArgs e)
+        {
+
+            // Abrir Menu Principal
+            MenuPrincipalMedico menuPrincipalMed = new MenuPrincipalMedico();
+            menuPrincipalMed.Show();
+            this.Hide(); // Fecha o formulário atual
+        }
     }
 }

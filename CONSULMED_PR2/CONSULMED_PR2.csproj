@@ -293,5 +293,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-back-26.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-de-inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-de-inicio %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

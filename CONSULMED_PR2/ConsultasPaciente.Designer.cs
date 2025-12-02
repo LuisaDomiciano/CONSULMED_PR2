@@ -35,6 +35,7 @@
             this.comboBoxFiltroEspecialidade = new System.Windows.Forms.ComboBox();
             this.dateTimePickerFiltroPac = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnVoltarPac = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,11 +187,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // BtnVoltarPac
+            // 
+            this.BtnVoltarPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVoltarPac.Location = new System.Drawing.Point(28, 437);
+            this.BtnVoltarPac.Name = "BtnVoltarPac";
+            this.BtnVoltarPac.Size = new System.Drawing.Size(71, 35);
+            this.BtnVoltarPac.TabIndex = 13;
+            this.BtnVoltarPac.Text = "Voltar";
+            this.BtnVoltarPac.UseVisualStyleBackColor = true;
+            this.BtnVoltarPac.Click += new System.EventHandler(this.BtnVoltarPac_Click);
+            // 
             // ConsultasPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 495);
+            this.Controls.Add(this.BtnVoltarPac);
             this.Controls.Add(this.dateTimePickerFiltroPac);
             this.Controls.Add(this.comboBoxFiltroEspecialidade);
             this.Controls.Add(this.comboBoxFiltroMed);
@@ -213,5 +226,6 @@
         private System.Windows.Forms.ComboBox comboBoxFiltroMed;
         private System.Windows.Forms.ComboBox comboBoxFiltroEspecialidade;
         private System.Windows.Forms.DateTimePicker dateTimePickerFiltroPac;
+        private System.Windows.Forms.Button BtnVoltarPac;
     }
 }

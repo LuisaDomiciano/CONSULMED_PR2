@@ -20,8 +20,8 @@ namespace CONSULMED_PR2
         // Comando SQL para inserir os dados
 
         private const string InsertSql = @"INSERT INTO CadastroMedico 
-                                    (NOME_MED, CPF_MED, EMAIL_MED, TELEFONE_MED, CRM, CODCONVENIO, CODSUS_MED, USUARIO_MED, SENHA_MED, CONFIRME_SENHA_MED)
-                                     VALUES (@NOME_MED, @CPF_MED, @EMAIL_MED, @TELEFONE_MED, @CRM, @CODCONVENIO, @CODSUS_MED, @USUARIO_MED, @SENHA_MED, @CONFIRME_SENHA_MED)";
+                                    (NOME_MED, CPF_MED, EMAIL_MED, TELEFONE_MED, CRM, CODCONVENIO_MED, CODSUS_MED, USUARIO_MED, SENHA_MED, CONFIRME_SENHA_MED)
+                                     VALUES (@NOME_MED, @CPF_MED, @EMAIL_MED, @TELEFONE_MED, @CRM, @CODCONVENIO_MED, @CODSUS_MED, @USUARIO_MED, @SENHA_MED, @CONFIRME_SENHA_MED)";
 
         public CadastroMedico()
         {
@@ -111,7 +111,7 @@ namespace CONSULMED_PR2
                                     cmd.Parameters.AddWithValue("@EMAIL_MED", string.IsNullOrEmpty(email) ? (object)DBNull.Value : email);
                                     cmd.Parameters.AddWithValue("@TELEFONE_MED", string.IsNullOrEmpty(telefone) ? (object)DBNull.Value : telefone);
                                     cmd.Parameters.AddWithValue("@CRM", string.IsNullOrEmpty(crm) ? (object)DBNull.Value : crm);
-                                    cmd.Parameters.AddWithValue("@CODCONVENIO", dbCodConvenio);
+                                    cmd.Parameters.AddWithValue("@CODCONVENIO_MED", dbCodConvenio);
                                     cmd.Parameters.AddWithValue("@CODSUS_MED", dbCodSus);
                                     cmd.Parameters.AddWithValue("@USUARIO_MED", usuario);
                                     cmd.Parameters.AddWithValue("@SENHA_MED", senha);
@@ -173,6 +173,11 @@ namespace CONSULMED_PR2
         }
 
         private void txtUserMed_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAgreementMed_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -49,11 +49,14 @@
             this.txtValorConsulta = new System.Windows.Forms.TextBox();
             this.BtnSalvarInfo = new System.Windows.Forms.Button();
             this.LblTituloInformacoes = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblEspecialidadeInfoMed
             // 
             this.LblEspecialidadeInfoMed.AutoSize = true;
+            this.LblEspecialidadeInfoMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblEspecialidadeInfoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblEspecialidadeInfoMed.Location = new System.Drawing.Point(59, 115);
             this.LblEspecialidadeInfoMed.Name = "LblEspecialidadeInfoMed";
@@ -65,6 +68,7 @@
             // LblRqe
             // 
             this.LblRqe.AutoSize = true;
+            this.LblRqe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblRqe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRqe.Location = new System.Drawing.Point(59, 205);
             this.LblRqe.Name = "LblRqe";
@@ -99,6 +103,7 @@
             // LblValorConsulta
             // 
             this.LblValorConsulta.AutoSize = true;
+            this.LblValorConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblValorConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblValorConsulta.Location = new System.Drawing.Point(60, 448);
             this.LblValorConsulta.Name = "LblValorConsulta";
@@ -110,6 +115,7 @@
             // LblHoraAtendimentoMed
             // 
             this.LblHoraAtendimentoMed.AutoSize = true;
+            this.LblHoraAtendimentoMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblHoraAtendimentoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHoraAtendimentoMed.Location = new System.Drawing.Point(59, 394);
             this.LblHoraAtendimentoMed.Name = "LblHoraAtendimentoMed";
@@ -120,6 +126,7 @@
             // LblFormaturaMed
             // 
             this.LblFormaturaMed.AutoSize = true;
+            this.LblFormaturaMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblFormaturaMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFormaturaMed.Location = new System.Drawing.Point(59, 300);
             this.LblFormaturaMed.Name = "LblFormaturaMed";
@@ -130,6 +137,7 @@
             // LblExperiencia
             // 
             this.LblExperiencia.AutoSize = true;
+            this.LblExperiencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblExperiencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblExperiencia.Location = new System.Drawing.Point(59, 351);
             this.LblExperiencia.Name = "LblExperiencia";
@@ -140,6 +148,7 @@
             // LblSubespecialidade
             // 
             this.LblSubespecialidade.AutoSize = true;
+            this.LblSubespecialidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblSubespecialidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSubespecialidade.Location = new System.Drawing.Point(59, 161);
             this.LblSubespecialidade.Name = "LblSubespecialidade";
@@ -150,6 +159,7 @@
             // LblFormacaoMed
             // 
             this.LblFormacaoMed.AutoSize = true;
+            this.LblFormacaoMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblFormacaoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFormacaoMed.Location = new System.Drawing.Point(59, 256);
             this.LblFormacaoMed.Name = "LblFormacaoMed";
@@ -159,6 +169,7 @@
             // 
             // txtEspecialidadePrincipal
             // 
+            this.txtEspecialidadePrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtEspecialidadePrincipal.Location = new System.Drawing.Point(342, 120);
             this.txtEspecialidadePrincipal.Name = "txtEspecialidadePrincipal";
             this.txtEspecialidadePrincipal.Size = new System.Drawing.Size(100, 20);
@@ -166,6 +177,7 @@
             // 
             // txtHorarioAtendimento
             // 
+            this.txtHorarioAtendimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtHorarioAtendimento.Location = new System.Drawing.Point(278, 398);
             this.txtHorarioAtendimento.Name = "txtHorarioAtendimento";
             this.txtHorarioAtendimento.Size = new System.Drawing.Size(100, 20);
@@ -173,6 +185,7 @@
             // 
             // txtTempoExperiencia
             // 
+            this.txtTempoExperiencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtTempoExperiencia.Location = new System.Drawing.Point(431, 356);
             this.txtTempoExperiencia.Name = "txtTempoExperiencia";
             this.txtTempoExperiencia.Size = new System.Drawing.Size(100, 20);
@@ -180,6 +193,7 @@
             // 
             // txtAnoFormatura
             // 
+            this.txtAnoFormatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtAnoFormatura.Location = new System.Drawing.Point(226, 305);
             this.txtAnoFormatura.Name = "txtAnoFormatura";
             this.txtAnoFormatura.Size = new System.Drawing.Size(100, 20);
@@ -187,6 +201,7 @@
             // 
             // txtInstituicaoFormacao
             // 
+            this.txtInstituicaoFormacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtInstituicaoFormacao.Location = new System.Drawing.Point(272, 261);
             this.txtInstituicaoFormacao.Name = "txtInstituicaoFormacao";
             this.txtInstituicaoFormacao.Size = new System.Drawing.Size(100, 20);
@@ -195,6 +210,7 @@
             // 
             // txtNumeroROE
             // 
+            this.txtNumeroROE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtNumeroROE.Location = new System.Drawing.Point(222, 209);
             this.txtNumeroROE.Name = "txtNumeroROE";
             this.txtNumeroROE.Size = new System.Drawing.Size(100, 20);
@@ -202,6 +218,7 @@
             // 
             // txtSubespecialidade
             // 
+            this.txtSubespecialidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtSubespecialidade.Location = new System.Drawing.Point(337, 166);
             this.txtSubespecialidade.Name = "txtSubespecialidade";
             this.txtSubespecialidade.Size = new System.Drawing.Size(100, 20);
@@ -210,6 +227,7 @@
             // 
             // txtValorConsulta
             // 
+            this.txtValorConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.txtValorConsulta.Location = new System.Drawing.Point(226, 452);
             this.txtValorConsulta.Name = "txtValorConsulta";
             this.txtValorConsulta.Size = new System.Drawing.Size(100, 20);
@@ -217,30 +235,44 @@
             // 
             // BtnSalvarInfo
             // 
-            this.BtnSalvarInfo.Location = new System.Drawing.Point(694, 490);
+            this.BtnSalvarInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+            this.BtnSalvarInfo.Location = new System.Drawing.Point(804, 477);
             this.BtnSalvarInfo.Name = "BtnSalvarInfo";
             this.BtnSalvarInfo.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvarInfo.TabIndex = 19;
             this.BtnSalvarInfo.Text = "Salvar";
-            this.BtnSalvarInfo.UseVisualStyleBackColor = true;
+            this.BtnSalvarInfo.UseVisualStyleBackColor = false;
             this.BtnSalvarInfo.Click += new System.EventHandler(this.BtnSalvarInfo_Click);
             // 
             // LblTituloInformacoes
             // 
             this.LblTituloInformacoes.AutoSize = true;
+            this.LblTituloInformacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.LblTituloInformacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTituloInformacoes.Location = new System.Drawing.Point(85, 26);
+            this.LblTituloInformacoes.Location = new System.Drawing.Point(54, 32);
             this.LblTituloInformacoes.Name = "LblTituloInformacoes";
             this.LblTituloInformacoes.Size = new System.Drawing.Size(289, 55);
             this.LblTituloInformacoes.TabIndex = 20;
             this.LblTituloInformacoes.Text = "Informações";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::CONSULMED_PR2.Properties.Resources.Design_sem_nome__1_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(908, 512);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // InformaçõesMédico
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 525);
+            this.ClientSize = new System.Drawing.Size(908, 512);
             this.Controls.Add(this.LblTituloInformacoes);
             this.Controls.Add(this.BtnSalvarInfo);
             this.Controls.Add(this.txtValorConsulta);
@@ -262,9 +294,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LblRqe);
             this.Controls.Add(this.LblEspecialidadeInfoMed);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "InformaçõesMédico";
             this.Text = "InformaçõesMédico";
             this.Load += new System.EventHandler(this.InformaçõesMédico_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +327,6 @@
         private System.Windows.Forms.TextBox txtValorConsulta;
         private System.Windows.Forms.Button BtnSalvarInfo;
         private System.Windows.Forms.Label LblTituloInformacoes;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

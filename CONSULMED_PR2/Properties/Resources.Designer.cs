@@ -73,6 +73,26 @@ namespace CONSULMED_PR2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botao_de_inicio {
+            get {
+                object obj = ResourceManager.GetObject("botao-de-inicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botao_de_inicio__1_ {
+            get {
+                object obj = ResourceManager.GetObject("botao-de-inicio (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_tela_2025_09_02_120531 {
             get {
                 object obj = ResourceManager.GetObject("Captura de tela 2025-09-02 120531", resourceCulture);
@@ -103,6 +123,16 @@ namespace CONSULMED_PR2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Design sem nome (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Design_sem_nome__3_ {
             get {
                 object obj = ResourceManager.GetObject("Design sem nome (3)", resourceCulture);
@@ -116,6 +146,16 @@ namespace CONSULMED_PR2.Properties {
         internal static System.Drawing.Bitmap Design_sem_nome__4_ {
             get {
                 object obj = ResourceManager.GetObject("Design sem nome (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_sem_nome1 {
+            get {
+                object obj = ResourceManager.GetObject("Design sem nome1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

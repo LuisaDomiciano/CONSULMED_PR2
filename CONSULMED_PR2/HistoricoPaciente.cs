@@ -16,5 +16,13 @@ namespace CONSULMED_PR2
         {
             InitializeComponent();
         }
+
+        private void BtnVoltarPac_Click(object sender, EventArgs e)
+        {
+
+            MenuPrincipalPaciente MenuPaciente = new MenuPrincipalPaciente();
+            MenuPaciente.Show();
+            this.Hide();
+        }
     }
 }

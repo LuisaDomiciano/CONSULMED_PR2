@@ -22,47 +22,10 @@ namespace CONSULMED_PR2
 
         }
 
-        private void MenuPrincipalPac(object sender, EventArgs e)
-        {
-            panelMenuPac.Visible = false;
-        }
-
-        bool menuExpandido = false;
-        private void BtnMenuPac_Click(object sender, EventArgs e)
-        {
-            panelMenuPac.Visible = !panelMenuPac.Visible;
-
-            timerMenuPac.Start();
-        }
-
-
-        private void timerMenuPac_Tick(object sender, EventArgs e)
-        {
-            if (menuExpandido)
-            {
-                panelMenuPac.Width -= 20;
-                if (panelMenuPac.Width <= 0)
-                {
-                    timerMenuPac.Stop();
-                    menuExpandido = false;
-                }
-            }
-            else
-            {
-                panelMenuPac.Width += 20;
-                if (panelMenuPac.Width >= 200)
-                {
-                    timerMenuPac.Stop();
-                    menuExpandido = true;
-                }
-            }
-
-        }
-
         private void BtnAgendarConsultaPac_Click(object sender, EventArgs e)
         {
             // Cria uma nova instância do formulário de agendamento
-            AgendarConsultaPaciente formAgendar = new AgendarConsultaPaciente();
+            ConsultasPaciente formAgendar = new ConsultasPaciente();
 
             // Mostra o novo formulário
             formAgendar.Show();
@@ -81,6 +44,13 @@ namespace CONSULMED_PR2
 
             // Fecha ou esconde o MenuPaciente (você escolhe)
             this.Hide(); // ou this.Close();
+        }
+
+        private void buttonHistoricoMenuPac_Click(object sender, EventArgs e)
+        {
+            HistoricoPaciente HistoricoPaciente = new HistoricoPaciente();
+            HistoricoPaciente.Show();
+            this.Hide();
         }
     }
 }

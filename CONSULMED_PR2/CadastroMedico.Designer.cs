@@ -219,11 +219,12 @@
             "Bradesco",
             "SulAmérica"});
             this.comboBoxAgreementMed.Location = new System.Drawing.Point(288, 397);
-            this.comboBoxAgreementMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxAgreementMed.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAgreementMed.Name = "comboBoxAgreementMed";
             this.comboBoxAgreementMed.Size = new System.Drawing.Size(92, 24);
             this.comboBoxAgreementMed.TabIndex = 15;
             this.comboBoxAgreementMed.Text = "Selecione:";
+            this.comboBoxAgreementMed.SelectedIndexChanged += new System.EventHandler(this.comboBoxAgreementMed_SelectedIndexChanged);
             // 
             // checkBoxAgreementNoMed
             // 
@@ -231,7 +232,7 @@
             this.checkBoxAgreementNoMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.checkBoxAgreementNoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkBoxAgreementNoMed.Location = new System.Drawing.Point(234, 364);
-            this.checkBoxAgreementNoMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxAgreementNoMed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxAgreementNoMed.Name = "checkBoxAgreementNoMed";
             this.checkBoxAgreementNoMed.Size = new System.Drawing.Size(53, 21);
             this.checkBoxAgreementNoMed.TabIndex = 16;
@@ -245,7 +246,7 @@
             this.checkBoxAgreementYesMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.checkBoxAgreementYesMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkBoxAgreementYesMed.Location = new System.Drawing.Point(234, 400);
-            this.checkBoxAgreementYesMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxAgreementYesMed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxAgreementYesMed.Name = "checkBoxAgreementYesMed";
             this.checkBoxAgreementYesMed.Size = new System.Drawing.Size(50, 21);
             this.checkBoxAgreementYesMed.TabIndex = 17;
@@ -259,7 +260,7 @@
             this.checkBoxNoMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.checkBoxNoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkBoxNoMed.Location = new System.Drawing.Point(693, 132);
-            this.checkBoxNoMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxNoMed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxNoMed.Name = "checkBoxNoMed";
             this.checkBoxNoMed.Size = new System.Drawing.Size(53, 21);
             this.checkBoxNoMed.TabIndex = 18;
@@ -272,7 +273,7 @@
             this.checkBoxYesMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.checkBoxYesMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkBoxYesMed.Location = new System.Drawing.Point(622, 132);
-            this.checkBoxYesMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxYesMed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxYesMed.Name = "checkBoxYesMed";
             this.checkBoxYesMed.Size = new System.Drawing.Size(50, 21);
             this.checkBoxYesMed.TabIndex = 19;
@@ -284,7 +285,7 @@
             this.txtNameMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtNameMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtNameMed.Location = new System.Drawing.Point(119, 127);
-            this.txtNameMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameMed.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameMed.Name = "txtNameMed";
             this.txtNameMed.Size = new System.Drawing.Size(146, 23);
             this.txtNameMed.TabIndex = 20;
@@ -293,8 +294,8 @@
             // 
             this.txtCpfMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtCpfMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtCpfMed.Location = new System.Drawing.Point(94, 181);
-            this.txtCpfMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCpfMed.Location = new System.Drawing.Point(115, 180);
+            this.txtCpfMed.Margin = new System.Windows.Forms.Padding(2);
             this.txtCpfMed.Name = "txtCpfMed";
             this.txtCpfMed.Size = new System.Drawing.Size(146, 23);
             this.txtCpfMed.TabIndex = 21;
@@ -303,8 +304,8 @@
             // 
             this.txtEmailMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtEmailMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtEmailMed.Location = new System.Drawing.Point(119, 228);
-            this.txtEmailMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailMed.Location = new System.Drawing.Point(138, 223);
+            this.txtEmailMed.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailMed.Name = "txtEmailMed";
             this.txtEmailMed.Size = new System.Drawing.Size(146, 23);
             this.txtEmailMed.TabIndex = 22;
@@ -314,7 +315,7 @@
             this.txtUserMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtUserMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtUserMed.Location = new System.Drawing.Point(482, 280);
-            this.txtUserMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserMed.Margin = new System.Windows.Forms.Padding(2);
             this.txtUserMed.Name = "txtUserMed";
             this.txtUserMed.Size = new System.Drawing.Size(146, 23);
             this.txtUserMed.TabIndex = 23;
@@ -325,7 +326,7 @@
             this.txtCrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtCrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtCrm.Location = new System.Drawing.Point(115, 321);
-            this.txtCrm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCrm.Margin = new System.Windows.Forms.Padding(2);
             this.txtCrm.Name = "txtCrm";
             this.txtCrm.Size = new System.Drawing.Size(146, 23);
             this.txtCrm.TabIndex = 24;
@@ -334,8 +335,8 @@
             // 
             this.txtFoneMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtFoneMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtFoneMed.Location = new System.Drawing.Point(141, 269);
-            this.txtFoneMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFoneMed.Location = new System.Drawing.Point(154, 270);
+            this.txtFoneMed.Margin = new System.Windows.Forms.Padding(2);
             this.txtFoneMed.Name = "txtFoneMed";
             this.txtFoneMed.Size = new System.Drawing.Size(146, 23);
             this.txtFoneMed.TabIndex = 25;
@@ -345,8 +346,9 @@
             this.txtConfirmPasswordMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtConfirmPasswordMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtConfirmPasswordMed.Location = new System.Drawing.Point(491, 453);
-            this.txtConfirmPasswordMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirmPasswordMed.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmPasswordMed.Name = "txtConfirmPasswordMed";
+            this.txtConfirmPasswordMed.PasswordChar = '*';
             this.txtConfirmPasswordMed.Size = new System.Drawing.Size(146, 23);
             this.txtConfirmPasswordMed.TabIndex = 26;
             // 
@@ -355,8 +357,9 @@
             this.txtPasswordMed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.txtPasswordMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtPasswordMed.Location = new System.Drawing.Point(482, 364);
-            this.txtPasswordMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPasswordMed.Margin = new System.Windows.Forms.Padding(2);
             this.txtPasswordMed.Name = "txtPasswordMed";
+            this.txtPasswordMed.PasswordChar = '*';
             this.txtPasswordMed.Size = new System.Drawing.Size(146, 23);
             this.txtPasswordMed.TabIndex = 27;
             // 
@@ -364,7 +367,7 @@
             // 
             this.btnSaveRegistrationMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveRegistrationMed.Location = new System.Drawing.Point(705, 476);
-            this.btnSaveRegistrationMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveRegistrationMed.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveRegistrationMed.Name = "btnSaveRegistrationMed";
             this.btnSaveRegistrationMed.Size = new System.Drawing.Size(65, 35);
             this.btnSaveRegistrationMed.TabIndex = 28;
@@ -390,7 +393,7 @@
             this.TxtCodSus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.TxtCodSus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtCodSus.Location = new System.Drawing.Point(600, 184);
-            this.TxtCodSus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCodSus.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCodSus.Name = "TxtCodSus";
             this.TxtCodSus.Size = new System.Drawing.Size(146, 23);
             this.TxtCodSus.TabIndex = 30;
@@ -412,7 +415,7 @@
             this.TxtCodAgreement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(201)))));
             this.TxtCodAgreement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TxtCodAgreement.Location = new System.Drawing.Point(214, 453);
-            this.TxtCodAgreement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtCodAgreement.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCodAgreement.Name = "TxtCodAgreement";
             this.TxtCodAgreement.Size = new System.Drawing.Size(146, 23);
             this.TxtCodAgreement.TabIndex = 32;
@@ -422,7 +425,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(781, 521);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -466,7 +469,7 @@
             this.Controls.Add(this.lblNameMed);
             this.Controls.Add(this.lblRegistrationMed);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CadastroMedico";
             this.Text = "c";
             this.Load += new System.EventHandler(this.CadastroMedico_Load);

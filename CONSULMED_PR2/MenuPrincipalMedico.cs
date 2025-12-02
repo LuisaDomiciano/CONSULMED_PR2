@@ -43,7 +43,9 @@ namespace CONSULMED_PR2
         }
         private void BtnMinhasConsultasMed_Click(object sender, EventArgs e)
         {
-
+            ConsultasMedico ConsultasMedico = new ConsultasMedico();
+            ConsultasMedico.Show();
+            this.Hide();
         }
     }
 }

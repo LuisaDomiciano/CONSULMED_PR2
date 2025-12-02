@@ -19,12 +19,12 @@ namespace CONSULMED_PR2
         private string connectionString = @"Data Source=sqlexpress;Initial Catalog=CJ3027392PR2;User ID=aluno;Password=aluno;";
 
         // Comando SQL para inserir os dados
-        private const string InsertSql = @"INSERT INTO CadastroPaciente
-(NOME_PAC, CPF_PAC, EMAIL_PAC, TELEFONE_PAC, CODSUS_PAC, USUARIO_PAC, SENHA_PAC, CONFIRME_SENHA_PAC)
-VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @CODSUS_PAC, @USUARIO_PAC, @SENHA_PAC, @CONFIRME_SENHA_PAC)";
+        private const string InsertSql = @"INSERT INTO Paciente
+(NOME_PAC, CPF_PAC, EMAIL_PAC, TELEFONE_PAC, COD_SUS_PAC, USUARIO_PAC, SENHA_PAC, CONFIRME_SENHA_PAC)
+VALUES (@NOME_PAC, @CPF_PAC, @EMAIL_PAC, @TELEFONE_PAC, @COD_SUS_PAC, @USUARIO_PAC, @SENHA_PAC, @CONFIRME_SENHA_PAC)";
 
         // Comando SQL para inserir também os dados de login
-        private const string InsertLoginSql = @"INSERT INTO Pagina_LoginPac
+        private const string InsertLoginSql = @"INSERT INTO LoginPac
 (Usuario_LogPac, Senha_LogPac)
 VALUES (@USUARIO, @SENHA)";
 
@@ -44,11 +44,11 @@ VALUES (@USUARIO, @SENHA)";
             // Mostra o ComboBox somente se "Sim" estiver marcado
             if (radioButtonYes.Checked)
             {
-                comboBoxAgreementPac.Visible = true;
+
             }
             else
             {
-                comboBoxAgreementPac.Visible = false;
+
             }
         }
 
@@ -57,7 +57,7 @@ VALUES (@USUARIO, @SENHA)";
             // Esconde o ComboBox se "Não" estiver marcado
             if (radioButtonNo.Checked)
             {
-                comboBoxAgreementPac.Visible = false;
+
             }
         }
 
@@ -100,16 +100,45 @@ VALUES (@USUARIO, @SENHA)";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 using (SqlCommand cmd = new SqlCommand(InsertSql, conn))
                 {
+                    // Variáveis para armazenar o estado do convênio (bool) e o nome selecionado (string)
+                    bool possuiConvenio = false;
+                    string nomeConvenio = null;
+
+                    // Verifica se o Radio Button "Sim" está marcado
+                    if (radioButtonYes.Checked) // Substitua 'rbSimConvenio' pelo nome real do seu Radio Button 'Sim'
+                    {
+                        possuiConvenio = true;
+
+                        // Captura o nome do convênio selecionado no ComboBox (Dropdown)
+                        if (comboBoxAgreementPac.SelectedItem != null) // Substitua 'cmbConvenio' pelo nome real do seu ComboBox
+                        {
+                            nomeConvenio = comboBoxAgreementPac.SelectedItem.ToString();
+                        }
+                    }
+                    // Se o 'Não' estiver marcado, possuiConvenio já é 'false' e nomeConvenio já é 'null'.
+
+                    // Define o valor do convênio para o banco (DBNull.Value se estiver vazio)
+                    object dbNomeConvenio = string.IsNullOrEmpty(nomeConvenio) ? (object)DBNull.Value : nomeConvenio;
+
+
+                    // 2. --- Adiciona parâmetros (Incluindo os de Convênio) ---
+
                     // Adiciona parâmetros
                     cmd.Parameters.AddWithValue("@NOME_PAC", nomePac);
                     cmd.Parameters.AddWithValue("@CPF_PAC", cpfPac);
                     cmd.Parameters.AddWithValue("@EMAIL_PAC", emailPac);
                     cmd.Parameters.AddWithValue("@TELEFONE_PAC", telefonePac);
-                    cmd.Parameters.AddWithValue("@CODSUS_PAC", codSusPac);
+                    cmd.Parameters.AddWithValue("@COD_SUS_PAC", codSusPac);
+
+                    // Parâmetros de Convênio ENCAIXADOS AQUI
+                    cmd.Parameters.AddWithValue("@POSSUI_CONVENIO", possuiConvenio); // BIT/BOOLEAN (1 ou 0)
+                    cmd.Parameters.AddWithValue("@CONVENIO_SELECIONADO", dbNomeConvenio); // VARCHAR (Nome do Convênio ou NULL)
+
                     cmd.Parameters.AddWithValue("@USUARIO_PAC", usuarioPac);
                     cmd.Parameters.AddWithValue("@SENHA_PAC", senhaPac);
                     cmd.Parameters.AddWithValue("@CONFIRME_SENHA_PAC", confirmaPac);
 
+                    // ... (cmd.ExecuteNonQuery() ou o restante do seu código)
                     conn.Open();
 
                     // Executa inserção na tabela de pacientes
@@ -152,6 +181,16 @@ VALUES (@USUARIO, @SENHA)";
         }
 
         private void pictureBoxCadastroPac_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonYes_CheckedChanged_1(object sender, EventArgs e)
+        {
+            comboBoxAgreementPac.Visible = true; // Mostrar se marcado "Sim"
+        }
+
+        private void comboBoxAgreementPac_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

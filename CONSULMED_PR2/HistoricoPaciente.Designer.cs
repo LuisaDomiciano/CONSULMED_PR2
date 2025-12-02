@@ -32,6 +32,7 @@
             this.PictureBoxHistoryPac = new System.Windows.Forms.PictureBox();
             this.LblHistory = new System.Windows.Forms.Label();
             this.DataGridViewHistory = new System.Windows.Forms.DataGridView();
+            this.BtnVoltarPac = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxHistoryPac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewHistory)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +42,7 @@
             this.PictureBoxHistoryPac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PictureBoxHistoryPac.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxHistoryPac.Image")));
             this.PictureBoxHistoryPac.Location = new System.Drawing.Point(0, 0);
-            this.PictureBoxHistoryPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PictureBoxHistoryPac.Margin = new System.Windows.Forms.Padding(2);
             this.PictureBoxHistoryPac.Name = "PictureBoxHistoryPac";
             this.PictureBoxHistoryPac.Size = new System.Drawing.Size(655, 407);
             this.PictureBoxHistoryPac.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,23 +64,35 @@
             // DataGridViewHistory
             // 
             this.DataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewHistory.Location = new System.Drawing.Point(341, 162);
-            this.DataGridViewHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DataGridViewHistory.Location = new System.Drawing.Point(226, 152);
+            this.DataGridViewHistory.Margin = new System.Windows.Forms.Padding(2);
             this.DataGridViewHistory.Name = "DataGridViewHistory";
             this.DataGridViewHistory.RowHeadersWidth = 51;
             this.DataGridViewHistory.RowTemplate.Height = 24;
-            this.DataGridViewHistory.Size = new System.Drawing.Size(180, 122);
+            this.DataGridViewHistory.Size = new System.Drawing.Size(343, 195);
             this.DataGridViewHistory.TabIndex = 2;
+            // 
+            // BtnVoltarPac
+            // 
+            this.BtnVoltarPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVoltarPac.Location = new System.Drawing.Point(12, 351);
+            this.BtnVoltarPac.Name = "BtnVoltarPac";
+            this.BtnVoltarPac.Size = new System.Drawing.Size(71, 35);
+            this.BtnVoltarPac.TabIndex = 10;
+            this.BtnVoltarPac.Text = "Voltar";
+            this.BtnVoltarPac.UseVisualStyleBackColor = true;
+            this.BtnVoltarPac.Click += new System.EventHandler(this.BtnVoltarPac_Click);
             // 
             // HistoricoPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 407);
+            this.Controls.Add(this.BtnVoltarPac);
             this.Controls.Add(this.DataGridViewHistory);
             this.Controls.Add(this.LblHistory);
             this.Controls.Add(this.PictureBoxHistoryPac);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HistoricoPaciente";
             this.Text = "HistoricoMedico";
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxHistoryPac)).EndInit();
@@ -94,5 +107,6 @@
         private System.Windows.Forms.PictureBox PictureBoxHistoryPac;
         private System.Windows.Forms.Label LblHistory;
         private System.Windows.Forms.DataGridView DataGridViewHistory;
+        private System.Windows.Forms.Button BtnVoltarPac;
     }
 }
